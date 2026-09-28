@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="th" data-theme="obsidian">
 <head>
 <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-mobile-web-app-title" content="Nutri" />
-<title>Nutri Journal</title>
+<title>Nutri Journal</title><!-- Deploy Trigger -->
 <script>
   // apply saved theme before paint (no flash)
   try { var t = JSON.parse(localStorage.getItem('nj.theme')); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -207,7 +207,7 @@
     // Using popup as default because redirect requires getRedirectResult and cross-domain auth can fail on Safari. 
     window.loginWithGoogle = () => signInWithPopup(window.auth, window.googleProvider).catch(e => {
         if(e.code === 'auth/popup-blocked') {
-            alert("กรุณาอนุญาตให้เปิด Popup (หน้าต่างเด้ง) ใน Safari แล้วลองใหม่ครับ!");
+            alert("เธเธฃเธธเธ“เธฒเธญเธเธธเธเธฒเธ•เนเธซเนเน€เธเธดเธ” Popup (เธซเธเนเธฒเธ•เนเธฒเธเน€เธ”เนเธ) เนเธ Safari เนเธฅเนเธงเธฅเธญเธเนเธซเธกเนเธเธฃเธฑเธ!");
         } else {
             signInWithRedirect(window.auth, window.googleProvider);
         }
@@ -327,8 +327,8 @@
   <section id="secStats" class="card overflow-hidden mt-5 fade-in">
     <div class="p-5 pb-0">
       <div class="flex items-center justify-between gap-2">
-        <div class="h-title">เหลือกินได้วันนี้</div>
-        <span id="deficitBadge" class="chip th !text-[11px] !font-medium !tracking-normal">ลด 20%</span>
+        <div class="h-title">เน€เธซเธฅเธทเธญเธเธดเธเนเธ”เนเธงเธฑเธเธเธตเน</div>
+        <span id="deficitBadge" class="chip th !text-[11px] !font-medium !tracking-normal">เธฅเธ” 20%</span>
       </div>
       <div class="mt-3 flex items-baseline gap-2">
         <div id="remainingNum" class="disp text-[52px] leading-none">0</div>
@@ -337,10 +337,10 @@
       </div>
       <div class="track mt-4"><div id="budgetFill" class="fill" style="width:0%"></div></div>
       <div class="mt-5 grid grid-cols-3 gap-3">
-        <div><div class="lbl">เป้าหมาย</div><div id="statTarget" class="num val">0</div></div>
-        <div><div class="lbl">กินไปแล้ว</div><div id="statConsumed" class="num val">0</div></div>
+        <div><div class="lbl">เน€เธเนเธฒเธซเธกเธฒเธข</div><div id="statTarget" class="num val">0</div></div>
+        <div><div class="lbl">เธเธดเธเนเธเนเธฅเนเธง</div><div id="statConsumed" class="num val">0</div></div>
         <button id="btnBurn" class="text-left rounded-xl -m-1 p-1 hover:bg-white/[.03] transition">
-          <div class="lbl">ขาดดุล</div><div id="statDeficit" class="num val">0</div>
+          <div class="lbl">เธเธฒเธ”เธ”เธธเธฅ</div><div id="statDeficit" class="num val">0</div>
           <div id="statBurn" class="th text-[11px] text-mute mt-0.5"></div>
         </button>
       </div>
@@ -365,7 +365,7 @@
     <div class="relative h-[290px] overflow-hidden" id="heroScene">
       <svg class="absolute inset-0 h-full w-full" viewBox="0 0 400 300" preserveAspectRatio="xMidYMax slice" id="sceneSvg" aria-hidden="true"></svg>
       <div id="heroSnow" class="absolute inset-0 pointer-events-none"></div>
-      <div id="charBox" class="absolute bottom-[5%] left-[6%] h-[74%] aspect-[200/260] cursor-pointer" role="button" aria-label="แตะตัวละคร"></div>
+      <div id="charBox" class="absolute bottom-[5%] left-[6%] h-[74%] aspect-[200/260] cursor-pointer" role="button" aria-label="เนเธ•เธฐเธ•เธฑเธงเธฅเธฐเธเธฃ"></div>
       <div id="charSay" class="say hide absolute left-[44%] top-[31%] max-w-[52%] rounded-2xl rounded-bl-sm bg-cream px-3 py-2 text-[12px] th font-medium text-[#171a2b] shadow-xl"></div>
       <div class="pointer-events-none absolute left-5 top-5 right-5 flex items-start justify-between gap-3">
         <div class="min-w-0">
@@ -380,9 +380,9 @@
     </div>
     <div class="p-5">
       <div class="grid grid-cols-4 gap-2">
-        <div><div class="lbl">เริ่ม</div><div id="hsStart" class="num val"></div></div>
-        <div><div class="lbl">ตอนนี้</div><div id="hsNow" class="num val !text-acc2"></div></div>
-        <div><div class="lbl">เป้าหมาย</div><div id="hsGoal" class="num val"></div></div>
+        <div><div class="lbl">เน€เธฃเธดเนเธก</div><div id="hsStart" class="num val"></div></div>
+        <div><div class="lbl">เธ•เธญเธเธเธตเน</div><div id="hsNow" class="num val !text-acc2"></div></div>
+        <div><div class="lbl">เน€เธเนเธฒเธซเธกเธฒเธข</div><div id="hsGoal" class="num val"></div></div>
         <div><div class="lbl">BMI</div><div id="hsBmi" class="num val"></div></div>
       </div>
       <div class="relative mt-4 h-[52px]">
@@ -399,8 +399,8 @@
         <span id="trailL"></span><span id="trailPct" class="th font-medium text-acc2"></span><span id="trailR"></span>
       </div>
       <div class="mt-4 flex items-center gap-3">
-        <button id="btnWeigh" class="btn-p flex-1 rounded-2xl py-3 text-[13.5px] th flex items-center justify-center gap-2 active:scale-[.99] transition">บันทึกน้ำหนักวันนี้</button>
-        <button id="btnGhost" class="px-2 text-[12px] th text-mute hover:text-txt transition">เทียบร่างแรก</button>
+        <button id="btnWeigh" class="btn-p flex-1 rounded-2xl py-3 text-[13.5px] th flex items-center justify-center gap-2 active:scale-[.99] transition">เธเธฑเธเธ—เธถเธเธเนเธณเธซเธเธฑเธเธงเธฑเธเธเธตเน</button>
+        <button id="btnGhost" class="px-2 text-[12px] th text-mute hover:text-txt transition">เน€เธ—เธตเธขเธเธฃเนเธฒเธเนเธฃเธ</button>
       </div>
     </div>
   </section>
@@ -408,7 +408,7 @@
   <!-- ===================== NUTRIENTS ===================== -->
   <section id="secAlloc" class="card mt-5 p-5 fade-in">
     <div class="flex items-center justify-between gap-2">
-      <div class="h-title">สารอาหารวันนี้</div>
+      <div class="h-title">เธชเธฒเธฃเธญเธฒเธซเธฒเธฃเธงเธฑเธเธเธตเน</div>
       <div id="splitLegend" class="num text-[11px] text-mute"></div>
     </div>
     <div class="mt-5 flex items-center gap-5">
@@ -434,13 +434,13 @@
   <section id="secLog" class="card mt-5 fade-in overflow-hidden">
     <div class="flex items-center justify-between gap-2 px-5 pt-5 pb-2">
       <div>
-        <div class="h-title">มื้ออาหาร</div>
-        <div class="th text-[12px] text-mute mt-0.5"><span id="logCount" class="num">0</span> รายการ</div>
+        <div class="h-title">เธกเธทเนเธญเธญเธฒเธซเธฒเธฃ</div>
+        <div class="th text-[12px] text-mute mt-0.5"><span id="logCount" class="num">0</span> เธฃเธฒเธขเธเธฒเธฃ</div>
       </div>
       <div class="rng flex items-center gap-1" id="logFilter">
-        <button data-lf="today" class="border px-3 py-1 text-[12px] th text-mute">วันนี้</button>
-        <button data-lf="7d" class="border px-3 py-1 text-[12px] th text-mute">7 วัน</button>
-        <button data-lf="all" class="border px-3 py-1 text-[12px] th text-mute">ทั้งหมด</button>
+        <button data-lf="today" class="border px-3 py-1 text-[12px] th text-mute">เธงเธฑเธเธเธตเน</button>
+        <button data-lf="7d" class="border px-3 py-1 text-[12px] th text-mute">7 เธงเธฑเธ</button>
+        <button data-lf="all" class="border px-3 py-1 text-[12px] th text-mute">เธ—เธฑเนเธเธซเธกเธ”</button>
       </div>
     </div>
     <div id="mealList" class="pb-2"></div>
@@ -450,13 +450,13 @@
   <section id="secWeight" class="card mt-5 overflow-hidden fade-in">
     <div class="p-5 pb-0">
       <div class="flex items-center justify-between gap-2">
-        <div class="h-title">น้ำหนัก</div>
-        <span id="rateBadge" class="chip num">—</span>
+        <div class="h-title">เธเนเธณเธซเธเธฑเธ</div>
+        <span id="rateBadge" class="chip num">โ€”</span>
       </div>
       <div class="mt-4 grid grid-cols-3 gap-3">
-        <div><div class="lbl">เฉลี่ย 7 วัน</div><div id="wTrend" class="num val">—</div></div>
-        <div><div class="lbl">ต่อสัปดาห์</div><div id="wRate" class="num val">—</div><div id="wRatePct" class="num text-[11px] text-mute"></div></div>
-        <div><div class="lbl">ถึงเป้าอีก</div><div id="wToGoal" class="num val">—</div><div id="wEta" class="th text-[11px] text-mute"></div></div>
+        <div><div class="lbl">เน€เธเธฅเธตเนเธข 7 เธงเธฑเธ</div><div id="wTrend" class="num val">โ€”</div></div>
+        <div><div class="lbl">เธ•เนเธญเธชเธฑเธเธ”เธฒเธซเน</div><div id="wRate" class="num val">โ€”</div><div id="wRatePct" class="num text-[11px] text-mute"></div></div>
+        <div><div class="lbl">เธ–เธถเธเน€เธเนเธฒเธญเธตเธ</div><div id="wToGoal" class="num val">โ€”</div><div id="wEta" class="th text-[11px] text-mute"></div></div>
       </div>
       <p id="wHint" class="th text-[12.5px] text-mute mt-4 leading-relaxed"></p>
     </div>
@@ -469,7 +469,7 @@
     </div>
   </section>
 
-  <p class="text-center text-[11px] text-mute/70 mt-8 th">ข้อมูลเก็บในเครื่องของคุณ · ค่าจาก AI เป็นการประมาณ ไม่ใช่คำแนะนำทางการแพทย์</p>
+  <p class="text-center text-[11px] text-mute/70 mt-8 th">เธเนเธญเธกเธนเธฅเน€เธเนเธเนเธเน€เธเธฃเธทเนเธญเธเธเธญเธเธเธธเธ“ ยท เธเนเธฒเธเธฒเธ AI เน€เธเนเธเธเธฒเธฃเธเธฃเธฐเธกเธฒเธ“ เนเธกเนเนเธเนเธเธณเนเธเธฐเธเธณเธ—เธฒเธเธเธฒเธฃเนเธเธ—เธขเน</p>
 </div>
 
 <!-- ===================== FLOATING BOTTOM NAV ===================== -->
@@ -506,64 +506,64 @@
     <div class="sheet-head sticky top-0 z-10 backdrop-blur px-5 pt-4 pb-3 border-b border-line/60 flex items-center justify-between">
       <div>
         <div class="eyebrow">Traveller Profile</div>
-        <div class="th text-[15px] font-semibold mt-0.5">ตั้งค่าโปรไฟล์ &amp; เป้าหมาย</div>
+        <div class="th text-[15px] font-semibold mt-0.5">เธ•เธฑเนเธเธเนเธฒเนเธเธฃเนเธเธฅเน &amp; เน€เธเนเธฒเธซเธกเธฒเธข</div>
       </div>
-      <button data-close class="h-8 w-8 rounded-full border border-line grid place-items-center text-mute hover:text-txt">✕</button>
+      <button data-close class="h-8 w-8 rounded-full border border-line grid place-items-center text-mute hover:text-txt">โ•</button>
     </div>
     <div class="px-5 py-4 space-y-4 th text-[13px]">
       <div class="flex gap-3 items-end">
         <div class="h-[92px] aspect-[200/260] rounded-2xl bg-ink/60 border border-line overflow-hidden shrink-0"><svg id="pPreview" viewBox="0 20 200 240" class="h-full w-full"></svg></div>
         <div class="flex-1">
-          <label class="text-mute text-[11px]">ชื่อเล่น (ไม่บังคับ)</label>
-          <input id="pName" class="field mt-1" maxlength="20" placeholder="เช่น Thus" />
+          <label class="text-mute text-[11px]">เธเธทเนเธญเน€เธฅเนเธ (เนเธกเนเธเธฑเธเธเธฑเธ)</label>
+          <input id="pName" class="field mt-1" maxlength="20" placeholder="เน€เธเนเธ Thus" />
         </div>
       </div>
       <div>
-        <label class="text-mute text-[11px]">เพศ (Sex)</label>
+        <label class="text-mute text-[11px]">เน€เธเธจ (Sex)</label>
         <div class="seg mt-1 grid grid-cols-2 gap-2" id="pSex">
-          <button data-v="male" class="rounded-xl border border-line py-2.5">ชาย · Male</button>
-          <button data-v="female" class="rounded-xl border border-line py-2.5">หญิง · Female</button>
+          <button data-v="male" class="rounded-xl border border-line py-2.5">เธเธฒเธข ยท Male</button>
+          <button data-v="female" class="rounded-xl border border-line py-2.5">เธซเธเธดเธ ยท Female</button>
         </div>
       </div>
       <div class="grid grid-cols-3 gap-2">
-        <div><label class="text-mute text-[11px]">อายุ (ปี)</label><input id="pAge" type="number" inputmode="numeric" min="13" max="90" class="field mt-1 num" /></div>
-        <div><label class="text-mute text-[11px]">ส่วนสูง (cm)</label><input id="pHeight" type="number" inputmode="decimal" min="120" max="230" class="field mt-1 num" /></div>
-        <div><label class="text-mute text-[11px]">น้ำหนัก (kg)</label><input id="pWeight" type="number" inputmode="decimal" min="30" max="250" step="0.1" class="field mt-1 num" /></div>
+        <div><label class="text-mute text-[11px]">เธญเธฒเธขเธธ (เธเธต)</label><input id="pAge" type="number" inputmode="numeric" min="13" max="90" class="field mt-1 num" /></div>
+        <div><label class="text-mute text-[11px]">เธชเนเธงเธเธชเธนเธ (cm)</label><input id="pHeight" type="number" inputmode="decimal" min="120" max="230" class="field mt-1 num" /></div>
+        <div><label class="text-mute text-[11px]">เธเนเธณเธซเธเธฑเธ (kg)</label><input id="pWeight" type="number" inputmode="decimal" min="30" max="250" step="0.1" class="field mt-1 num" /></div>
       </div>
       <div>
-        <label class="text-mute text-[11px]">น้ำหนักเป้าหมาย (kg)</label>
+        <label class="text-mute text-[11px]">เธเนเธณเธซเธเธฑเธเน€เธเนเธฒเธซเธกเธฒเธข (kg)</label>
         <input id="pGoalW" type="number" inputmode="decimal" min="30" max="250" step="0.1" class="field mt-1 num" />
       </div>
       <div>
-        <label class="text-mute text-[11px]">ระดับกิจกรรม (Activity Level)</label>
+        <label class="text-mute text-[11px]">เธฃเธฐเธ”เธฑเธเธเธดเธเธเธฃเธฃเธก (Activity Level)</label>
         <select id="pActivity" class="field mt-1">
-          <option value="1.2">Sedentary ×1.2 — นั่งทำงาน ไม่ออกกำลังกาย</option>
-          <option value="1.375">Lightly Active ×1.375 — ออกกำลัง 1–3 วัน/สัปดาห์</option>
-          <option value="1.55">Moderately Active ×1.55 — ออกกำลัง 3–5 วัน/สัปดาห์</option>
-          <option value="1.725">Very Active ×1.725 — ซ้อมหนัก 6–7 วัน/สัปดาห์</option>
-          <option value="1.9">Extra Active ×1.9 — นักกีฬา / ซ้อมวันละ 2 รอบ</option>
+          <option value="1.2">Sedentary ร—1.2 โ€” เธเธฑเนเธเธ—เธณเธเธฒเธ เนเธกเนเธญเธญเธเธเธณเธฅเธฑเธเธเธฒเธข</option>
+          <option value="1.375">Lightly Active ร—1.375 โ€” เธญเธญเธเธเธณเธฅเธฑเธ 1โ€“3 เธงเธฑเธ/เธชเธฑเธเธ”เธฒเธซเน</option>
+          <option value="1.55">Moderately Active ร—1.55 โ€” เธญเธญเธเธเธณเธฅเธฑเธ 3โ€“5 เธงเธฑเธ/เธชเธฑเธเธ”เธฒเธซเน</option>
+          <option value="1.725">Very Active ร—1.725 โ€” เธเนเธญเธกเธซเธเธฑเธ 6โ€“7 เธงเธฑเธ/เธชเธฑเธเธ”เธฒเธซเน</option>
+          <option value="1.9">Extra Active ร—1.9 โ€” เธเธฑเธเธเธตเธฌเธฒ / เธเนเธญเธกเธงเธฑเธเธฅเธฐ 2 เธฃเธญเธ</option>
         </select>
       </div>
       <div>
-        <label class="text-mute text-[11px]">เป้าหมาย (Goal)</label>
+        <label class="text-mute text-[11px]">เน€เธเนเธฒเธซเธกเธฒเธข (Goal)</label>
         <div class="seg mt-1 grid grid-cols-2 gap-2" id="pGoal">
-          <button data-v="cut20" class="rounded-xl border border-line py-2 text-[12px]">Fat Loss −20%</button>
-          <button data-v="cut15" class="rounded-xl border border-line py-2 text-[12px]">Fat Loss −15%</button>
+          <button data-v="cut20" class="rounded-xl border border-line py-2 text-[12px]">Fat Loss โ’20%</button>
+          <button data-v="cut15" class="rounded-xl border border-line py-2 text-[12px]">Fat Loss โ’15%</button>
           <button data-v="maintain" class="rounded-xl border border-line py-2 text-[12px]">Maintenance</button>
           <button data-v="bulk" class="rounded-xl border border-line py-2 text-[12px]">Lean Bulk +10%</button>
         </div>
       </div>
       <div class="mt-2">
-        <label class="text-mute text-[11px] block mb-2">Diet Plan · แผนโภชนาการ (อ้างอิงงานวิจัย)</label>
+        <label class="text-mute text-[11px] block mb-2">Diet Plan ยท เนเธเธเนเธ เธเธเธฒเธเธฒเธฃ (เธญเนเธฒเธเธญเธดเธเธเธฒเธเธงเธดเธเธฑเธข)</label>
         <div class="seg grid grid-cols-2 gap-2" id="pDiet">
-          <button data-v="balanced" class="rounded-xl border border-line py-2.5 flex flex-col items-center justify-center leading-tight"><span class="text-[12px]">Balanced</span><span class="text-[10px] text-mute mt-1">สมดุล (P 30% / F 30%)</span></button>
-          <button data-v="highcarb" class="rounded-xl border border-line py-2.5 flex flex-col items-center justify-center leading-tight"><span class="text-[12px]">High Carb</span><span class="text-[10px] text-mute mt-1">สายปั๊ม/วิ่ง (Carbs 60%)</span></button>
-          <button data-v="lowcarb" class="rounded-xl border border-line py-2.5 flex flex-col items-center justify-center leading-tight"><span class="text-[12px]">Low Carb</span><span class="text-[10px] text-mute mt-1">เน้นลีน (Carbs 20%)</span></button>
-          <button data-v="keto" class="rounded-xl border border-line py-2.5 flex flex-col items-center justify-center leading-tight"><span class="text-[12px]">Ketogenic</span><span class="text-[10px] text-mute mt-1">เผาไขมัน (Fat 75%)</span></button>
+          <button data-v="balanced" class="rounded-xl border border-line py-2.5 flex flex-col items-center justify-center leading-tight"><span class="text-[12px]">Balanced</span><span class="text-[10px] text-mute mt-1">เธชเธกเธ”เธธเธฅ (P 30% / F 30%)</span></button>
+          <button data-v="highcarb" class="rounded-xl border border-line py-2.5 flex flex-col items-center justify-center leading-tight"><span class="text-[12px]">High Carb</span><span class="text-[10px] text-mute mt-1">เธชเธฒเธขเธเธฑเนเธก/เธงเธดเนเธ (Carbs 60%)</span></button>
+          <button data-v="lowcarb" class="rounded-xl border border-line py-2.5 flex flex-col items-center justify-center leading-tight"><span class="text-[12px]">Low Carb</span><span class="text-[10px] text-mute mt-1">เน€เธเนเธเธฅเธตเธ (Carbs 20%)</span></button>
+          <button data-v="keto" class="rounded-xl border border-line py-2.5 flex flex-col items-center justify-center leading-tight"><span class="text-[12px]">Ketogenic</span><span class="text-[10px] text-mute mt-1">เน€เธเธฒเนเธเธกเธฑเธ (Fat 75%)</span></button>
         </div>
       </div>
       <div class="rounded-2xl border border-acc/40 bg-acc/[.08] p-3">
-        <div class="eyebrow">Live Calculation · Mifflin-St Jeor</div>
+        <div class="eyebrow">Live Calculation ยท Mifflin-St Jeor</div>
         <div class="mt-2 grid grid-cols-3 gap-2 num">
           <div><div class="text-[9px] text-mute">BMR</div><div id="cvBmr" class="text-[15px] font-bold"></div></div>
           <div><div class="text-[9px] text-mute">TDEE</div><div id="cvTdee" class="text-[15px] font-bold"></div></div>
@@ -577,7 +577,7 @@
         </div>
         <p id="cvWarn" class="th mt-2 text-[11px] text-warm"></p>
       </div>
-      <button id="pSave" class="btn-p w-full rounded-2xl py-3.5 active:scale-[.99] transition">บันทึกโปรไฟล์</button>
+      <button id="pSave" class="btn-p w-full rounded-2xl py-3.5 active:scale-[.99] transition">เธเธฑเธเธ—เธถเธเนเธเธฃเนเธเธฅเน</button>
     </div>
   </div>
 </div>
@@ -588,31 +588,31 @@
     <div class="sheet-head sticky top-0 z-10 backdrop-blur px-5 pt-4 pb-3 border-b border-line/60 flex items-center justify-between">
       <div>
         <div class="eyebrow">Weekly Summary</div>
-        <div class="th text-[15px] font-semibold mt-0.5">สรุปรายสัปดาห์ (7 วันล่าสุด)</div>
+        <div class="th text-[15px] font-semibold mt-0.5">เธชเธฃเธธเธเธฃเธฒเธขเธชเธฑเธเธ”เธฒเธซเน (7 เธงเธฑเธเธฅเนเธฒเธชเธธเธ”)</div>
       </div>
-      <button data-close class="h-8 w-8 rounded-full border border-line grid place-items-center text-mute hover:text-txt">✕</button>
+      <button data-close class="h-8 w-8 rounded-full border border-line grid place-items-center text-mute hover:text-txt">โ•</button>
     </div>
     <div class="px-5 py-5 space-y-4 text-[13px]">
       <div class="grid grid-cols-2 gap-3">
         <div class="rounded-2xl border border-line bg-card p-3 text-center">
-          <div class="text-[10px] text-mute mb-1">เฉลี่ยแคลอรี่/วัน</div>
+          <div class="text-[10px] text-mute mb-1">เน€เธเธฅเธตเนเธขเนเธเธฅเธญเธฃเธตเน/เธงเธฑเธ</div>
           <div id="rCal" class="text-xl font-bold num text-acc">0</div>
         </div>
         <div class="rounded-2xl border border-line bg-card p-3 text-center">
-          <div class="text-[10px] text-mute mb-1">เฉลี่ยโปรตีน/วัน</div>
+          <div class="text-[10px] text-mute mb-1">เน€เธเธฅเธตเนเธขเนเธเธฃเธ•เธตเธ/เธงเธฑเธ</div>
           <div id="rProt" class="text-xl font-bold num text-acc2">0g</div>
         </div>
         <div class="rounded-2xl border border-line bg-card p-3 text-center">
-          <div class="text-[10px] text-mute mb-1">เฉลี่ยคาร์บ/วัน</div>
+          <div class="text-[10px] text-mute mb-1">เน€เธเธฅเธตเนเธขเธเธฒเธฃเนเธ/เธงเธฑเธ</div>
           <div id="rCarb" class="text-xl font-bold num text-bad">0g</div>
         </div>
         <div class="rounded-2xl border border-line bg-card p-3 text-center">
-          <div class="text-[10px] text-mute mb-1">เฉลี่ยไขมัน/วัน</div>
+          <div class="text-[10px] text-mute mb-1">เน€เธเธฅเธตเนเธขเนเธเธกเธฑเธ/เธงเธฑเธ</div>
           <div id="rFat" class="text-xl font-bold num text-warn">0g</div>
         </div>
       </div>
       <div class="rounded-2xl border border-acc/40 bg-acc/[.08] p-4 text-center mt-2">
-        <div class="text-[11px] text-mute mb-1">น้ำหนักเฉลี่ย 7 วัน</div>
+        <div class="text-[11px] text-mute mb-1">เธเนเธณเธซเธเธฑเธเน€เธเธฅเธตเนเธข 7 เธงเธฑเธ</div>
         <div class="text-3xl font-bold num" id="rWeight">0.0 <span class="text-sm font-normal text-mute">kg</span></div>
         <div class="text-[11px] mt-2" id="rWeightDiff"></div>
       </div>
@@ -626,27 +626,27 @@
     <div class="sheet-head sticky top-0 z-10 backdrop-blur px-5 pt-4 pb-3 border-b border-line/60 flex items-center justify-between">
       <div>
         <div class="eyebrow">Settings</div>
-        <div class="th text-[15px] font-semibold mt-0.5">ตั้งค่าระบบ</div>
+        <div class="th text-[15px] font-semibold mt-0.5">เธ•เธฑเนเธเธเนเธฒเธฃเธฐเธเธ</div>
       </div>
-      <button data-close class="h-8 w-8 rounded-full border border-line grid place-items-center text-mute hover:text-txt">✕</button>
+      <button data-close class="h-8 w-8 rounded-full border border-line grid place-items-center text-mute hover:text-txt">โ•</button>
     </div>
     <div class="px-5 py-4 space-y-5 th text-[13px]">
       <div>
-        <div class="eyebrow !tracking-normal mb-2">Theme · ธีม</div>
+        <div class="eyebrow !tracking-normal mb-2">Theme ยท เธเธตเธก</div>
         <div class="seg grid grid-cols-2 gap-2" id="sTheme">
-          <button data-v="obsidian" class="rounded-xl border border-line py-3 text-[12px]">🌙 Midnight (Dark)</button>
-          <button data-v="traveller" class="rounded-xl border border-line py-3 text-[12px]">🏕️ Traveller (Blue)</button>
+          <button data-v="obsidian" class="rounded-xl border border-line py-3 text-[12px]">๐ Midnight (Dark)</button>
+          <button data-v="traveller" class="rounded-xl border border-line py-3 text-[12px]">๐•๏ธ Traveller (Blue)</button>
         </div>
       </div>
-      <div class="border-t border-line/60 pt-4"><div class="eyebrow mb-2">☁️ Cloud Sync (รหัสซิงค์ข้ามเครื่อง)</div><p class="text-[11px] text-mute mb-2">รหัสซิงค์ของคุณคือรหัสด้านล่าง ถ้านำไปกรอกเครื่องอื่น ข้อมูลจะตรงกันทันที</p><div class="flex gap-2"><input id="syncCodeInput" class="field flex-1 num text-[14px] text-center tracking-widest font-bold" placeholder="เช่น A1B2C" /><button onclick="window.loadFromCloud(document.getElementById('syncCodeInput').value)" class="btn-p px-4 rounded-xl">โหลดข้อมูล</button></div><script>setTimeout(() => { document.getElementById('syncCodeInput').value = localStorage.getItem('nj.syncCode') || ''; }, 1000);</script></div>
+      <div class="border-t border-line/60 pt-4"><div class="eyebrow mb-2">โ๏ธ Cloud Sync (เธฃเธซเธฑเธชเธเธดเธเธเนเธเนเธฒเธกเน€เธเธฃเธทเนเธญเธ)</div><p class="text-[11px] text-mute mb-2">เธฃเธซเธฑเธชเธเธดเธเธเนเธเธญเธเธเธธเธ“เธเธทเธญเธฃเธซเธฑเธชเธ”เนเธฒเธเธฅเนเธฒเธ เธ–เนเธฒเธเธณเนเธเธเธฃเธญเธเน€เธเธฃเธทเนเธญเธเธญเธทเนเธ เธเนเธญเธกเธนเธฅเธเธฐเธ•เธฃเธเธเธฑเธเธ—เธฑเธเธ—เธต</p><div class="flex gap-2"><input id="syncCodeInput" class="field flex-1 num text-[14px] text-center tracking-widest font-bold" placeholder="เน€เธเนเธ A1B2C" /><button onclick="window.loadFromCloud(document.getElementById('syncCodeInput').value)" class="btn-p px-4 rounded-xl">เนเธซเธฅเธ”เธเนเธญเธกเธนเธฅ</button></div><script>setTimeout(() => { document.getElementById('syncCodeInput').value = localStorage.getItem('nj.syncCode') || ''; }, 1000);</script></div>
       <div class="border-t border-line/60 pt-4">
         <div class="eyebrow mb-2">Data</div>
         <div class="grid grid-cols-2 gap-2">
-          <button id="sSample" class="rounded-xl border border-line py-3 text-[12px] hover:border-acc">โหลดข้อมูลตัวอย่าง 30 วัน</button>
+          <button id="sSample" class="rounded-xl border border-line py-3 text-[12px] hover:border-acc">เนเธซเธฅเธ”เธเนเธญเธกเธนเธฅเธ•เธฑเธงเธญเธขเนเธฒเธ 30 เธงเธฑเธ</button>
           <button id="sExport" class="rounded-xl border border-line py-3 text-[12px] hover:border-acc">Export JSON</button>
           <label class="rounded-xl border border-line py-3 text-[12px] hover:border-acc text-center cursor-pointer">Import JSON<input id="sImport" type="file" accept="application/json" class="hidden" /></label>
-          <button id="sReset" class="rounded-xl border border-bad/50 text-bad py-3 text-[12px] hover:bg-bad/10">ล้างข้อมูลทั้งหมด</button>
-          <button onclick="window.logout()" class="col-span-2 rounded-xl border border-line py-3 text-[12px] hover:bg-card">ออกจากระบบ (Logout)</button>
+          <button id="sReset" class="rounded-xl border border-bad/50 text-bad py-3 text-[12px] hover:bg-bad/10">เธฅเนเธฒเธเธเนเธญเธกเธนเธฅเธ—เธฑเนเธเธซเธกเธ”</button>
+          <button onclick="window.logout()" class="col-span-2 rounded-xl border border-line py-3 text-[12px] hover:bg-card">เธญเธญเธเธเธฒเธเธฃเธฐเธเธ (Logout)</button>
         </div>
       </div>
     </div>
@@ -659,13 +659,13 @@
     <div class="sheet-head sticky top-0 z-10 backdrop-blur px-5 pt-4 pb-3 border-b border-line/60 flex items-center justify-between">
       <div>
         <div class="eyebrow">Weigh-in</div>
-        <div class="th text-[15px] font-semibold mt-0.5">บันทึกน้ำหนัก</div>
+        <div class="th text-[15px] font-semibold mt-0.5">เธเธฑเธเธ—เธถเธเธเนเธณเธซเธเธฑเธ</div>
       </div>
-      <button data-close class="h-8 w-8 rounded-full border border-line grid place-items-center text-mute hover:text-txt">✕</button>
+      <button data-close class="h-8 w-8 rounded-full border border-line grid place-items-center text-mute hover:text-txt">โ•</button>
     </div>
     <div class="px-5 py-4 space-y-3 th">
       <div class="flex items-center gap-3">
-        <button data-step="-0.1" class="h-12 w-12 shrink-0 rounded-full border border-line text-xl text-soft active:scale-95">−</button>
+        <button data-step="-0.1" class="h-12 w-12 shrink-0 rounded-full border border-line text-xl text-soft active:scale-95">โ’</button>
         <div class="flex-1 relative">
           <input id="wInput" type="number" inputmode="decimal" step="0.1" min="30" max="250" class="field disp text-[40px] leading-none text-center !py-3" />
           <span class="absolute right-4 top-1/2 -translate-y-1/2 text-mute num text-sm">kg</span>
@@ -673,12 +673,12 @@
         <button data-step="0.1" class="h-12 w-12 shrink-0 rounded-full border border-line text-xl text-soft active:scale-95">+</button>
       </div>
       <div class="grid grid-cols-[auto_1fr] items-center gap-3">
-        <label class="text-mute text-[12px]">วันที่</label>
+        <label class="text-mute text-[12px]">เธงเธฑเธเธ—เธตเน</label>
         <input id="wDate" type="date" class="field num text-[13px]" />
       </div>
       <p id="wPrevInfo" class="text-[11.5px] text-soft"></p>
-      <p class="text-[11px] text-mute">💡 ชั่งตอนเช้าหลังเข้าห้องน้ำ ก่อนกิน/ดื่ม เพื่อให้ค่าสม่ำเสมอ · น้ำหนักรายวันแกว่ง ±1 kg ได้จากน้ำและโซเดียม ให้ดูเส้นเฉลี่ย 7 วันเป็นหลัก</p>
-      <button id="wSave" class="btn-p w-full rounded-2xl py-3.5">บันทึกน้ำหนัก</button>
+      <p class="text-[11px] text-mute">๐’ก เธเธฑเนเธเธ•เธญเธเน€เธเนเธฒเธซเธฅเธฑเธเน€เธเนเธฒเธซเนเธญเธเธเนเธณ เธเนเธญเธเธเธดเธ/เธ”เธทเนเธก เน€เธเธทเนเธญเนเธซเนเธเนเธฒเธชเธกเนเธณเน€เธชเธกเธญ ยท เธเนเธณเธซเธเธฑเธเธฃเธฒเธขเธงเธฑเธเนเธเธงเนเธ ยฑ1 kg เนเธ”เนเธเธฒเธเธเนเธณเนเธฅเธฐเนเธเน€เธ”เธตเธขเธก เนเธซเนเธ”เธนเน€เธชเนเธเน€เธเธฅเธตเนเธข 7 เธงเธฑเธเน€เธเนเธเธซเธฅเธฑเธ</p>
+      <button id="wSave" class="btn-p w-full rounded-2xl py-3.5">เธเธฑเธเธ—เธถเธเธเนเธณเธซเธเธฑเธ</button>
       <div class="pt-2">
         <div class="eyebrow mb-1">History</div>
         <div id="wList" class="divide-y divide-line/60"></div>
@@ -693,30 +693,30 @@
     <div class="sheet-head sticky top-0 z-10 backdrop-blur px-5 pt-4 pb-3 border-b border-line/60 flex items-center justify-between">
       <div>
         <div class="eyebrow flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-good"></span>AI Vision Scanner</div>
-        <div class="th text-[15px] font-semibold mt-0.5">สแกนอาหารด้วย Gemini</div>
+        <div class="th text-[15px] font-semibold mt-0.5">เธชเนเธเธเธญเธฒเธซเธฒเธฃเธ”เนเธงเธข Gemini</div>
       </div>
-      <button data-close class="h-8 w-8 rounded-full border border-line grid place-items-center text-mute hover:text-txt">✕</button>
+      <button data-close class="h-8 w-8 rounded-full border border-line grid place-items-center text-mute hover:text-txt">โ•</button>
     </div>
     <div class="px-5 py-4 space-y-4 th text-[13px]">
       <div class="seg grid grid-cols-2 gap-1 rounded-2xl border border-line bg-ink/40 p-1" id="scTabs">
-        <button data-tab="ai" class="on rounded-xl py-2 text-[12.5px]">📷 สแกนด้วย AI</button>
-        <button data-tab="manual" class="rounded-xl py-2 text-[12.5px]">✍️ กรอกเอง / เมนูเดิม</button>
+        <button data-tab="ai" class="on rounded-xl py-2 text-[12.5px]">๐“ท เธชเนเธเธเธ”เนเธงเธข AI</button>
+        <button data-tab="manual" class="rounded-xl py-2 text-[12.5px]">โ๏ธ เธเธฃเธญเธเน€เธญเธ / เน€เธกเธเธนเน€เธ”เธดเธก</button>
       </div>
       <div id="paneAI" class="space-y-4">
       <details id="keyBox" class="rounded-2xl border border-line bg-ink/40">
         <summary class="list-none cursor-pointer px-3 py-2.5 flex items-center justify-between gap-2">
           <span class="flex items-center gap-2 text-[12px] min-w-0">
             <svg viewBox="0 0 24 24" class="h-4 w-4 text-acc2 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></svg>
-            <span class="truncate">AI · <span id="modelLbl" class="num text-mute"></span></span>
+            <span class="truncate">AI ยท <span id="modelLbl" class="num text-mute"></span></span>
           </span>
           <span id="keyState" class="chip num shrink-0"></span>
         </summary>
         <div class="px-3 pb-3">
           <div class="flex gap-2">
-            <input id="scKey" type="password" autocomplete="off" class="field num text-[12px]" placeholder="วาง API Key ที่นี่ (AIza...)" />
-            <button id="scKeySave" class="btn-p shrink-0 rounded-xl px-4 text-[12px]">บันทึก</button>
+            <input id="scKey" type="password" autocomplete="off" class="field num text-[12px]" placeholder="เธงเธฒเธ API Key เธ—เธตเนเธเธตเน (AIza...)" />
+            <button id="scKeySave" class="btn-p shrink-0 rounded-xl px-4 text-[12px]">เธเธฑเธเธ—เธถเธ</button>
           </div>
-          <p class="text-[10.5px] text-mute mt-2">ไม่ต้องใส่ก็ได้ — ระบบใช้คีย์ที่ตั้งไว้บนเซิร์ฟเวอร์ให้อัตโนมัติ · ใส่เฉพาะถ้าอยากใช้คีย์ของตัวเอง</p>
+          <p class="text-[10.5px] text-mute mt-2">เนเธกเนเธ•เนเธญเธเนเธชเนเธเนเนเธ”เน โ€” เธฃเธฐเธเธเนเธเนเธเธตเธขเนเธ—เธตเนเธ•เธฑเนเธเนเธงเนเธเธเน€เธเธดเธฃเนเธเน€เธงเธญเธฃเนเนเธซเนเธญเธฑเธ•เนเธเธกเธฑเธ•เธด ยท เนเธชเนเน€เธเธเธฒเธฐเธ–เนเธฒเธญเธขเธฒเธเนเธเนเธเธตเธขเนเธเธญเธเธ•เธฑเธงเน€เธญเธ</p>
         </div>
       </details>
       <div class="relative overflow-hidden rounded-2xl border border-dashed border-line bg-ink/40 aspect-[4/3] grid place-items-center">
@@ -725,52 +725,52 @@
           <div class="mx-auto h-12 w-12 rounded-2xl border border-line grid place-items-center text-acc2">
             <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.5"/></svg>
           </div>
-          <p class="mt-3 text-[13px]">ถ่ายรูปหรืออัปโหลดรูปอาหาร</p>
-          <p class="text-[11px] text-mute mt-1">AI จะประเมินน้ำหนัก น้ำมันแฝง และมาโครให้อัตโนมัติ</p>
+          <p class="mt-3 text-[13px]">เธ–เนเธฒเธขเธฃเธนเธเธซเธฃเธทเธญเธญเธฑเธเนเธซเธฅเธ”เธฃเธนเธเธญเธฒเธซเธฒเธฃ</p>
+          <p class="text-[11px] text-mute mt-1">AI เธเธฐเธเธฃเธฐเน€เธกเธดเธเธเนเธณเธซเธเธฑเธ เธเนเธณเธกเธฑเธเนเธเธ เนเธฅเธฐเธกเธฒเนเธเธฃเนเธซเนเธญเธฑเธ•เนเธเธกเธฑเธ•เธด</p>
         </div>
         <div id="scScanning" class="absolute inset-0 hidden">
           <div class="absolute inset-0 bg-acc/10"></div>
           <div class="scanline"></div>
           <div class="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/70 px-3 py-1 text-[11px] num text-acc2 flex items-center gap-2">
-            <span class="h-3 w-3 rounded-full border-2 border-acc border-t-transparent spin"></span> <span id="scScanLbl">ANALYZING…</span>
+            <span class="h-3 w-3 rounded-full border-2 border-acc border-t-transparent spin"></span> <span id="scScanLbl">ANALYZINGโ€ฆ</span>
           </div>
         </div>
       </div>
       <div class="grid grid-cols-2 gap-2">
         <label class="cursor-pointer rounded-xl border border-line py-2.5 text-center text-[12px] hover:border-acc flex items-center justify-center gap-2">
           <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></svg>
-          ถ่ายรูป<input id="scCamera" type="file" accept="image/*" capture="environment" class="hidden" />
+          เธ–เนเธฒเธขเธฃเธนเธ<input id="scCamera" type="file" accept="image/*" capture="environment" class="hidden" />
         </label>
         <label class="cursor-pointer rounded-xl border border-line py-2.5 text-center text-[12px] hover:border-acc flex items-center justify-center gap-2">
           <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></svg>
-          เลือกจากคลัง<input id="scFile" type="file" accept="image/*" class="hidden" />
+          เน€เธฅเธทเธญเธเธเธฒเธเธเธฅเธฑเธ<input id="scFile" type="file" accept="image/*" class="hidden" />
         </label>
       </div>
-      <input id="scNote" class="field text-[12px]" maxlength="200" placeholder="รายละเอียดเพิ่มเติม (ไม่บังคับ) เช่น ข้าวครึ่งจาน, ไม่ใส่น้ำมัน" />
+      <input id="scNote" class="field text-[12px]" maxlength="200" placeholder="เธฃเธฒเธขเธฅเธฐเน€เธญเธตเธขเธ”เน€เธเธดเนเธกเน€เธ•เธดเธก (เนเธกเนเธเธฑเธเธเธฑเธ) เน€เธเนเธ เธเนเธฒเธงเธเธฃเธถเนเธเธเธฒเธ, เนเธกเนเนเธชเนเธเนเธณเธกเธฑเธ" />
       <div class="grid grid-cols-1 gap-2">
         <button id="scAnalyze" class="btn-p w-full rounded-2xl py-3.5 disabled:opacity-40 active:scale-[.99] transition flex items-center justify-center gap-2">
           <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M12 2l1.9 5.6L19.5 9.5 13.9 11.4 12 17l-1.9-5.6L4.5 9.5l5.6-1.9zM19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg>
-          วิเคราะห์ด้วย Gemini Vision
+          เธงเธดเน€เธเธฃเธฒเธฐเธซเนเธ”เนเธงเธข Gemini Vision
         </button>
-        <button id="scDemo" class="w-full rounded-2xl border border-line py-3 text-[13px] text-soft hover:border-acc hover:text-txt transition">ทดสอบด้วยข้อมูล Demo</button>
+        <button id="scDemo" class="w-full rounded-2xl border border-line py-3 text-[13px] text-soft hover:border-acc hover:text-txt transition">เธ—เธ”เธชเธญเธเธ”เนเธงเธขเธเนเธญเธกเธนเธฅ Demo</button>
       </div>
       </div>
       <div id="paneManual" class="hidden space-y-3">
         <div>
-          <div class="eyebrow !tracking-normal mb-2">เมนูล่าสุด · แตะเพื่อบันทึกซ้ำ</div>
+          <div class="eyebrow !tracking-normal mb-2">เน€เธกเธเธนเธฅเนเธฒเธชเธธเธ” ยท เนเธ•เธฐเน€เธเธทเนเธญเธเธฑเธเธ—เธถเธเธเนเธณ</div>
           <div id="recentChips" class="flex gap-2 overflow-x-auto no-scrollbar -mx-1 px-1 pb-1"></div>
         </div>
-        <input id="mnName" class="field" maxlength="60" placeholder="ชื่อเมนู เช่น ข้าวอกไก่ + ไข่ต้ม" />
+        <input id="mnName" class="field" maxlength="60" placeholder="เธเธทเนเธญเน€เธกเธเธน เน€เธเนเธ เธเนเธฒเธงเธญเธเนเธเน + เนเธเนเธ•เนเธก" />
         <div class="grid grid-cols-2 gap-2">
-          <label class="block"><span class="text-mute text-[11px]">พลังงาน (kcal)</span><input id="mnKcal" type="number" inputmode="numeric" class="field num mt-1" placeholder="คำนวณให้อัตโนมัติ" /></label>
-          <label class="block"><span class="text-mute text-[11px]">โปรตีน (g)</span><input id="mnP" type="number" inputmode="decimal" class="field num mt-1" placeholder="0" /></label>
-          <label class="block"><span class="text-mute text-[11px]">คาร์บ (g)</span><input id="mnC" type="number" inputmode="decimal" class="field num mt-1" placeholder="0" /></label>
-          <label class="block"><span class="text-mute text-[11px]">ไขมัน (g)</span><input id="mnF" type="number" inputmode="decimal" class="field num mt-1" placeholder="0" /></label>
-          <label class="block"><span class="text-mute text-[11px]">ไฟเบอร์ (g)</span><input id="mnFb" type="number" inputmode="decimal" class="field num mt-1" placeholder="0" /></label>
-          <label class="block"><span class="text-mute text-[11px]">โซเดียม (mg)</span><input id="mnNa" type="number" inputmode="numeric" class="field num mt-1" placeholder="0" /></label>
+          <label class="block"><span class="text-mute text-[11px]">เธเธฅเธฑเธเธเธฒเธ (kcal)</span><input id="mnKcal" type="number" inputmode="numeric" class="field num mt-1" placeholder="เธเธณเธเธงเธ“เนเธซเนเธญเธฑเธ•เนเธเธกเธฑเธ•เธด" /></label>
+          <label class="block"><span class="text-mute text-[11px]">เนเธเธฃเธ•เธตเธ (g)</span><input id="mnP" type="number" inputmode="decimal" class="field num mt-1" placeholder="0" /></label>
+          <label class="block"><span class="text-mute text-[11px]">เธเธฒเธฃเนเธ (g)</span><input id="mnC" type="number" inputmode="decimal" class="field num mt-1" placeholder="0" /></label>
+          <label class="block"><span class="text-mute text-[11px]">เนเธเธกเธฑเธ (g)</span><input id="mnF" type="number" inputmode="decimal" class="field num mt-1" placeholder="0" /></label>
+          <label class="block"><span class="text-mute text-[11px]">เนเธเน€เธเธญเธฃเน (g)</span><input id="mnFb" type="number" inputmode="decimal" class="field num mt-1" placeholder="0" /></label>
+          <label class="block"><span class="text-mute text-[11px]">เนเธเน€เธ”เธตเธขเธก (mg)</span><input id="mnNa" type="number" inputmode="numeric" class="field num mt-1" placeholder="0" /></label>
         </div>
         <p id="mnCalc" class="num text-[11px] text-mute"></p>
-        <button id="mnSave" class="btn-p w-full rounded-2xl py-3.5 active:scale-[.99] transition">บันทึกมื้อ</button>
+        <button id="mnSave" class="btn-p w-full rounded-2xl py-3.5 active:scale-[.99] transition">เธเธฑเธเธ—เธถเธเธกเธทเนเธญ</button>
       </div>
       <p id="scError" class="hidden rounded-xl border border-bad/40 bg-bad/10 px-3 py-2 text-[12px] text-bad"></p>
       <div id="scResult" class="hidden"></div>
@@ -783,7 +783,7 @@
   <div class="sheet border border-line w-full max-w-md max-h-[90vh] overflow-y-auto no-scrollbar rounded-t-[26px] sm:rounded-[26px] safe-bottom">
     <div class="sheet-head sticky top-0 z-10 backdrop-blur px-5 pt-4 pb-3 border-b border-line/60 flex items-center justify-between">
       <div class="eyebrow">Meal Detail</div>
-      <button data-close class="h-8 w-8 rounded-full border border-line grid place-items-center text-mute hover:text-txt">✕</button>
+      <button data-close class="h-8 w-8 rounded-full border border-line grid place-items-center text-mute hover:text-txt">โ•</button>
     </div>
     <div id="mealDetail" class="px-5 py-4 th text-[13px]"></div>
   </div>
@@ -795,9 +795,9 @@
     <div class="px-5 pt-4 pb-3 border-b border-line/60 flex items-center justify-between">
       <div>
         <div class="eyebrow">Active Burn</div>
-        <div class="th text-[15px] font-semibold mt-0.5">แคลอรี่ที่เผาผลาญจากการออกกำลังกายวันนี้</div>
+        <div class="th text-[15px] font-semibold mt-0.5">เนเธเธฅเธญเธฃเธตเนเธ—เธตเนเน€เธเธฒเธเธฅเธฒเธเธเธฒเธเธเธฒเธฃเธญเธญเธเธเธณเธฅเธฑเธเธเธฒเธขเธงเธฑเธเธเธตเน</div>
       </div>
-      <button data-close class="h-8 w-8 rounded-full border border-line grid place-items-center text-mute hover:text-txt">✕</button>
+      <button data-close class="h-8 w-8 rounded-full border border-line grid place-items-center text-mute hover:text-txt">โ•</button>
     </div>
     <div class="px-5 py-4 space-y-3 th">
       <input id="burnInput" type="number" inputmode="numeric" min="0" max="3000" class="field num text-2xl font-bold text-center" placeholder="0" />
@@ -807,8 +807,8 @@
         <button data-b="400" class="rounded-lg border border-line py-2">+400</button>
         <button data-b="0" class="rounded-lg border border-line py-2 text-mute">RESET</button>
       </div>
-      <p class="text-[11px] text-mute">แนะนำให้กรอกเพียง ~50–70% ของค่าจากนาฬิกา/แอป เพราะอุปกรณ์มักประเมินเกินจริง และ TDEE รวมกิจกรรมพื้นฐานไว้แล้ว</p>
-      <button id="burnSave" class="btn-p w-full rounded-2xl py-3">บันทึก</button>
+      <p class="text-[11px] text-mute">เนเธเธฐเธเธณเนเธซเนเธเธฃเธญเธเน€เธเธตเธขเธ ~50โ€“70% เธเธญเธเธเนเธฒเธเธฒเธเธเธฒเธฌเธดเธเธฒ/เนเธญเธ เน€เธเธฃเธฒเธฐเธญเธธเธเธเธฃเธ“เนเธกเธฑเธเธเธฃเธฐเน€เธกเธดเธเน€เธเธดเธเธเธฃเธดเธ เนเธฅเธฐ TDEE เธฃเธงเธกเธเธดเธเธเธฃเธฃเธกเธเธทเนเธเธเธฒเธเนเธงเนเนเธฅเนเธง</p>
+      <button id="burnSave" class="btn-p w-full rounded-2xl py-3">เธเธฑเธเธ—เธถเธ</button>
     </div>
   </div>
 </div>
@@ -824,8 +824,8 @@
 
 <script>
 /* =========================================================================
-   NUTRI JOURNAL — AI Calorie & Macro Tracker
-   Single-file app · Vanilla JS · localStorage persistence
+   NUTRI JOURNAL โ€” AI Calorie & Macro Tracker
+   Single-file app ยท Vanilla JS ยท localStorage persistence
    ========================================================================= */
 (() => {
   'use strict';
@@ -837,14 +837,14 @@
     theme: 'nj.theme', ghost: 'nj.ghost',
   };
   const load = (k, d) => { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch { return d; } };
-  const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); if(window.triggerCloudSync) window.triggerCloudSync(); return true; } catch { toast('พื้นที่จัดเก็บเต็ม ลองลบประวัติเก่า', 'bad'); return false; } };
+  const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); if(window.triggerCloudSync) window.triggerCloudSync(); return true; } catch { toast('เธเธทเนเธเธ—เธตเนเธเธฑเธ”เน€เธเนเธเน€เธ•เนเธก เธฅเธญเธเธฅเธเธเธฃเธฐเธงเธฑเธ•เธดเน€เธเนเธฒ', 'bad'); return false; } };
 
   // ---------- Constants ----------
   const GOALS = {
-    cut20:    { pct: 0.20,  badge: 'ลดไขมัน 20%', th: 'ลดไขมัน −20%', tone: 'acc2' },
-    cut15:    { pct: 0.15,  badge: 'ลดไขมัน 15%', th: 'ลดไขมัน −15%', tone: 'acc2' },
-    maintain: { pct: 0,     badge: 'รักษาน้ำหนัก', th: 'รักษาน้ำหนัก', tone: 'info' },
-    bulk:     { pct: -0.10, badge: 'เพิ่มกล้าม 10%', th: 'เพิ่มกล้าม +10%', tone: 'good' },
+    cut20:    { pct: 0.20,  badge: 'เธฅเธ”เนเธเธกเธฑเธ 20%', th: 'เธฅเธ”เนเธเธกเธฑเธ โ’20%', tone: 'acc2' },
+    cut15:    { pct: 0.15,  badge: 'เธฅเธ”เนเธเธกเธฑเธ 15%', th: 'เธฅเธ”เนเธเธกเธฑเธ โ’15%', tone: 'acc2' },
+    maintain: { pct: 0,     badge: 'เธฃเธฑเธเธฉเธฒเธเนเธณเธซเธเธฑเธ', th: 'เธฃเธฑเธเธฉเธฒเธเนเธณเธซเธเธฑเธ', tone: 'info' },
+    bulk:     { pct: -0.10, badge: 'เน€เธเธดเนเธกเธเธฅเนเธฒเธก 10%', th: 'เน€เธเธดเนเธกเธเธฅเนเธฒเธก +10%', tone: 'good' },
   };
   const SODIUM_LIMIT = 2000;
   const MPS_PROTEIN_G = 25;
@@ -852,21 +852,21 @@
   const FALLBACK_MODELS = ['gemini-3.1-pro-preview', 'gemini-3.8-flash', 'gemini-3.5-flash-lite'];
   const DEFAULT_PROFILE = { name: '', sex: 'male', age: 28, height: 175, weight: 75, startWeight: null, goalWeight: null, activity: 1.55, goal: 'cut20', proteinPerKg: 2.2, fatPct: 25 };
   const TIERS = [
-    { en: 'Rookie Camper', th: 'นักตั้งแคมป์มือใหม่ · เริ่มต้นการเดินทาง' },
-    { en: 'Trail Walker', th: 'นักเดินป่า · ปลดล็อกไม้เท้าเดินป่า' },
-    { en: 'Ridge Runner', th: 'นักวิ่งสันเขา · ปลดล็อกแว่นกันแดด' },
-    { en: 'Peak Seeker', th: 'ผู้ไล่ล่ายอดเขา · ผ้าพันคอปลิวลม' },
-    { en: 'Summit Legend', th: 'ตำนานแห่งยอดเขา · ปักธงสำเร็จ!' },
+    { en: 'Rookie Camper', th: 'เธเธฑเธเธ•เธฑเนเธเนเธเธกเธเนเธกเธทเธญเนเธซเธกเน ยท เน€เธฃเธดเนเธกเธ•เนเธเธเธฒเธฃเน€เธ”เธดเธเธ—เธฒเธ' },
+    { en: 'Trail Walker', th: 'เธเธฑเธเน€เธ”เธดเธเธเนเธฒ ยท เธเธฅเธ”เธฅเนเธญเธเนเธกเนเน€เธ—เนเธฒเน€เธ”เธดเธเธเนเธฒ' },
+    { en: 'Ridge Runner', th: 'เธเธฑเธเธงเธดเนเธเธชเธฑเธเน€เธเธฒ ยท เธเธฅเธ”เธฅเนเธญเธเนเธงเนเธเธเธฑเธเนเธ”เธ”' },
+    { en: 'Peak Seeker', th: 'เธเธนเนเนเธฅเนเธฅเนเธฒเธขเธญเธ”เน€เธเธฒ ยท เธเนเธฒเธเธฑเธเธเธญเธเธฅเธดเธงเธฅเธก' },
+    { en: 'Summit Legend', th: 'เธ•เธณเธเธฒเธเนเธซเนเธเธขเธญเธ”เน€เธเธฒ ยท เธเธฑเธเธเธเธชเธณเน€เธฃเนเธ!' },
   ];
   const QUOTES = [
-    { t: 'Protein first. โปรตีนคือประกันความเสี่ยงของกล้ามเนื้อในช่วง Deficit — ปิดโปรตีนให้ถึงเป้าก่อนทุกอย่าง', a: '— Risk Management 101' },
-    { t: 'ความสนุกของการเดินป่าอยู่ที่ระหว่างทาง ไม่ใช่ปลายทาง — คุมได้ 80% ทุกวัน ดีกว่าเป๊ะ 100% แค่สองวัน', a: '— The Journey' },
-    { t: 'อย่ากินตามอารมณ์ ถามตัวเองก่อนกิน: หิวจริง หรือแค่เบื่อ?', a: '— Behavioral Discipline' },
-    { t: 'Deficit ที่ยั่งยืนคือ 15–20% ของ TDEE ไม่ใช่การอดอาหาร — ลดเร็วเกิน ร่างกายจะเผากล้ามเนื้อแทน', a: '— Pace Yourself' },
-    { t: 'โปรตีน + ไฟเบอร์ = Satiety สูง อิ่มนาน ไม่ต้องพึ่งของว่าง', a: '— Trail Snack Rule' },
-    { t: 'น้ำมันที่มองไม่เห็นคือค่าธรรมเนียมแฝงของพอร์ตแคลอรี่ 1 ช้อนโต๊ะ ≈ 120 kcal', a: '— Hidden Fee' },
-    { t: 'นอน 7–9 ชั่วโมง Cortisol ต่ำ Ghrelin ต่ำ ความหิวก็ต่ำ — การพักผ่อนคือทางลัดที่ถูกที่สุด', a: '— Campfire Rest' },
-    { t: 'น้ำหนักรายวันคือสภาพอากาศ เส้นเฉลี่ย 7 วันคือภูมิอากาศ — ดูแนวโน้ม อย่าตกใจกับวันเดียว', a: '— Weather vs Climate' },
+    { t: 'Protein first. เนเธเธฃเธ•เธตเธเธเธทเธญเธเธฃเธฐเธเธฑเธเธเธงเธฒเธกเน€เธชเธตเนเธขเธเธเธญเธเธเธฅเนเธฒเธกเน€เธเธทเนเธญเนเธเธเนเธงเธ Deficit โ€” เธเธดเธ”เนเธเธฃเธ•เธตเธเนเธซเนเธ–เธถเธเน€เธเนเธฒเธเนเธญเธเธ—เธธเธเธญเธขเนเธฒเธ', a: 'โ€” Risk Management 101' },
+    { t: 'เธเธงเธฒเธกเธชเธเธธเธเธเธญเธเธเธฒเธฃเน€เธ”เธดเธเธเนเธฒเธญเธขเธนเนเธ—เธตเนเธฃเธฐเธซเธงเนเธฒเธเธ—เธฒเธ เนเธกเนเนเธเนเธเธฅเธฒเธขเธ—เธฒเธ โ€” เธเธธเธกเนเธ”เน 80% เธ—เธธเธเธงเธฑเธ เธ”เธตเธเธงเนเธฒเน€เธเนเธฐ 100% เนเธเนเธชเธญเธเธงเธฑเธ', a: 'โ€” The Journey' },
+    { t: 'เธญเธขเนเธฒเธเธดเธเธ•เธฒเธกเธญเธฒเธฃเธกเธ“เน เธ–เธฒเธกเธ•เธฑเธงเน€เธญเธเธเนเธญเธเธเธดเธ: เธซเธดเธงเธเธฃเธดเธ เธซเธฃเธทเธญเนเธเนเน€เธเธทเนเธญ?', a: 'โ€” Behavioral Discipline' },
+    { t: 'Deficit เธ—เธตเนเธขเธฑเนเธเธขเธทเธเธเธทเธญ 15โ€“20% เธเธญเธ TDEE เนเธกเนเนเธเนเธเธฒเธฃเธญเธ”เธญเธฒเธซเธฒเธฃ โ€” เธฅเธ”เน€เธฃเนเธงเน€เธเธดเธ เธฃเนเธฒเธเธเธฒเธขเธเธฐเน€เธเธฒเธเธฅเนเธฒเธกเน€เธเธทเนเธญเนเธ—เธ', a: 'โ€” Pace Yourself' },
+    { t: 'เนเธเธฃเธ•เธตเธ + เนเธเน€เธเธญเธฃเน = Satiety เธชเธนเธ เธญเธดเนเธกเธเธฒเธ เนเธกเนเธ•เนเธญเธเธเธถเนเธเธเธญเธเธงเนเธฒเธ', a: 'โ€” Trail Snack Rule' },
+    { t: 'เธเนเธณเธกเธฑเธเธ—เธตเนเธกเธญเธเนเธกเนเน€เธซเนเธเธเธทเธญเธเนเธฒเธเธฃเธฃเธกเน€เธเธตเธขเธกเนเธเธเธเธญเธเธเธญเธฃเนเธ•เนเธเธฅเธญเธฃเธตเน 1 เธเนเธญเธเนเธ•เนเธฐ โ 120 kcal', a: 'โ€” Hidden Fee' },
+    { t: 'เธเธญเธ 7โ€“9 เธเธฑเนเธงเนเธกเธ Cortisol เธ•เนเธณ Ghrelin เธ•เนเธณ เธเธงเธฒเธกเธซเธดเธงเธเนเธ•เนเธณ โ€” เธเธฒเธฃเธเธฑเธเธเนเธญเธเธเธทเธญเธ—เธฒเธเธฅเธฑเธ”เธ—เธตเนเธ–เธนเธเธ—เธตเนเธชเธธเธ”', a: 'โ€” Campfire Rest' },
+    { t: 'เธเนเธณเธซเธเธฑเธเธฃเธฒเธขเธงเธฑเธเธเธทเธญเธชเธ เธฒเธเธญเธฒเธเธฒเธจ เน€เธชเนเธเน€เธเธฅเธตเนเธข 7 เธงเธฑเธเธเธทเธญเธ เธนเธกเธดเธญเธฒเธเธฒเธจ โ€” เธ”เธนเนเธเธงเนเธเนเธก เธญเธขเนเธฒเธ•เธเนเธเธเธฑเธเธงเธฑเธเน€เธ”เธตเธขเธง', a: 'โ€” Weather vs Climate' },
   ];
 
   // ---------- Helpers ----------
@@ -1007,7 +1007,7 @@
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') $$('.sheet-wrap:not(.hidden-sheet)').forEach((w) => closeModal(w.id)); });
 
   // =========================================================================
-  // CHARACTER (parametric SVG — body shape follows sex / height / weight)
+  // CHARACTER (parametric SVG โ€” body shape follows sex / height / weight)
   // =========================================================================
   const CH = {
     skin: '#f2c8a0', skinSh: '#d9a27a', jacket: '#3f7cc0', jacketSh: '#2c5c93', pants: '#2a3350', pantsSh: '#222a44',
@@ -1285,7 +1285,7 @@
     $('#rankTh').textContent = TIERS[tier].th;
     tween($('#heroKg'), cur, (v) => fmt(v, 1), 1000);
     const diff = cur - start, dEl = $('#heroDelta');
-    dEl.textContent = Math.abs(diff) < 0.05 ? 'จุดเริ่มต้น' : `${diff < 0 ? 'ลดไป' : 'เพิ่มขึ้น'} ${fmt(Math.abs(diff), 1)} kg`;
+    dEl.textContent = Math.abs(diff) < 0.05 ? 'เธเธธเธ”เน€เธฃเธดเนเธกเธ•เนเธ' : `${diff < 0 ? 'เธฅเธ”เนเธ' : 'เน€เธเธดเนเธกเธเธถเนเธ'} ${fmt(Math.abs(diff), 1)} kg`;
     const wantDown = goal < start;
     dEl.style.color = Math.abs(diff) < 0.05 ? C('cream', 0.7) : (diff < 0) === wantDown ? C('good') : C('bad');
     $('#hsStart').textContent = fmt(start, 1); tween($('#hsNow'), cur, (v) => fmt(v, 1), 1000); $('#hsGoal').textContent = fmt(goal, 1);
@@ -1299,7 +1299,7 @@
     requestAnimationFrame(() => { $('#trailProg').style.strokeDasharray = `${r2(prog * 100)} 100`; });
     const mk = $('#trailMarker'); mk.style.left = (pt.x / 300) * 100 + '%'; mk.style.top = (pt.y / 56) * 100 + '%';
     $('#trailL').textContent = `${fmt(start, 1)} kg`; $('#trailR').textContent = `${fmt(goal, 1)} kg`;
-    $('#trailPct').textContent = `เดินมาแล้ว ${fmt(prog * 100)}%`;
+    $('#trailPct').textContent = `เน€เธ”เธดเธเธกเธฒเนเธฅเนเธง ${fmt(prog * 100)}%`;
 
     // character (tween body shape when weight changes)
     const sig = [b.f.toFixed(4), b0.f.toFixed(4), b.hs, b.m, b.sex, tier, showGhost].join('|');
@@ -1327,14 +1327,14 @@
     const c = calc(profile), t = totals(mealsOn(dayKey())), burned = num(burn[dayKey()]);
     const budget = c.target + burned, remaining = budget - t.kcal, netDeficit = c.tdee + burned - t.kcal;
     const rEl = $('#remainingNum');
-    tween(rEl, remaining, (v) => (Math.round(v) < 0 ? '−' : '') + fmt(Math.abs(Math.round(v))));
+    tween(rEl, remaining, (v) => (Math.round(v) < 0 ? 'โ’' : '') + fmt(Math.abs(Math.round(v))));
     rEl.style.color = remaining < 0 ? C('bad') : C('txt');
     const left = budget > 0 ? (remaining / budget) * 100 : 0, rp = $('#remainingPct');
-    rp.textContent = remaining < 0 ? `เกินมา ${fmt(Math.abs(left))}%` : `เหลือ ${fmt(left)}%`;
+    rp.textContent = remaining < 0 ? `เน€เธเธดเธเธกเธฒ ${fmt(Math.abs(left))}%` : `เน€เธซเธฅเธทเธญ ${fmt(left)}%`;
     rp.style.color = remaining < 0 ? C('bad') : C('good');
     const g = GOALS[profile.goal] || GOALS.cut20, db = $('#deficitBadge');
     db.textContent = g.badge; db.style.color = C(g.tone); db.style.background = C(g.tone, 0.1); db.style.borderColor = C(g.tone, 0.4);
-    $('#tdeeLine').textContent = `BMR ${fmt(c.bmr)} · TDEE ${fmt(c.tdee)} kcal`;
+    $('#tdeeLine').textContent = `BMR ${fmt(c.bmr)} ยท TDEE ${fmt(c.tdee)} kcal`;
     const bf = $('#budgetFill');
     bf.style.width = clamp(budget > 0 ? (t.kcal / budget) * 100 : 0, 0, 100) + '%';
     bf.style.background = remaining < 0 ? C('bad') : `linear-gradient(90deg, ${C('acc')}, ${C('info')})`;
@@ -1343,7 +1343,7 @@
     const dEl = $('#statDeficit');
     tween(dEl, netDeficit, (v) => (v < 0 ? '+' : '') + fmt(Math.abs(v)));
     dEl.style.color = netDeficit >= 0 ? C('txt') : C('bad');
-    $('#statBurn').textContent = burned ? `🔥 เผา +${fmt(burned)}` : '+ เพิ่มการเผาผลาญ';
+    $('#statBurn').textContent = burned ? `๐”ฅ เน€เธเธฒ +${fmt(burned)}` : '+ เน€เธเธดเนเธกเธเธฒเธฃเน€เธเธฒเธเธฅเธฒเธ';
   }
 
   function renderCalChart() {
@@ -1358,7 +1358,7 @@
       }
       raw.push({ y: cum, label: timeStr(now) });
       pts = raw.map((p, i) => ({ ...p, x: i / (raw.length - 1) }));
-      ref = c.target + num(burn[dayKey()]); title = 'แคลอรี่สะสมวันนี้';
+      ref = c.target + num(burn[dayKey()]); title = 'เนเธเธฅเธญเธฃเธตเนเธชเธฐเธชเธกเธงเธฑเธเธเธตเน';
     } else {
       let days = { '1W': 7, '1M': 30, '3M': 90 }[range];
       if (range === 'ALL') {
@@ -1372,12 +1372,12 @@
         const d = addDays(now, -i);
         pts.push({ x: (days - 1 - i) / (days - 1), y: byDay[dayKey(d)] || 0, label: d.toLocaleDateString('th-TH', { day: 'numeric', month: 'short' }) });
       }
-      ref = c.target; title = `แคลอรี่รายวัน · ${range}`;
+      ref = c.target; title = `เนเธเธฅเธญเธฃเธตเนเธฃเธฒเธขเธงเธฑเธ ยท ${range}`;
     }
     const has = pts.some((p) => p.y > 0);
     spark($('#calChart'), {
       pts, ref, refLabel: `TARGET ${fmt(ref)}`, min: 0, max: Math.max(ref * 1.15, ...pts.map((p) => p.y)) || 1,
-      color: 'acc', has, unit: 'kcal', empty: range === '1D' ? 'ยังไม่มีมื้ออาหารวันนี้ · กด + เพื่อสแกน' : 'ยังไม่มีข้อมูลในช่วงนี้',
+      color: 'acc', has, unit: 'kcal', empty: range === '1D' ? 'เธขเธฑเธเนเธกเนเธกเธตเธกเธทเนเธญเธญเธฒเธซเธฒเธฃเธงเธฑเธเธเธตเน ยท เธเธ” + เน€เธเธทเนเธญเธชเนเธเธ' : 'เธขเธฑเธเนเธกเนเธกเธตเธเนเธญเธกเธนเธฅเนเธเธเนเธงเธเธเธตเน',
     });
     $('#chartTitle').textContent = title;
     const meta = $('#chartMeta'), delta = $('#chartDelta');
@@ -1387,9 +1387,9 @@
       delta.textContent = `${fmt(pct, 1)}% USED`; delta.style.color = pct > 100 ? C('bad') : C('acc2');
     } else {
       const logged = pts.filter((p) => p.y > 0), avg = logged.length ? logged.reduce((a, p) => a + p.y, 0) / logged.length : 0;
-      meta.textContent = `AVG ${fmt(avg)} kcal · ${logged.length}/${pts.length} days logged`;
+      meta.textContent = `AVG ${fmt(avg)} kcal ยท ${logged.length}/${pts.length} days logged`;
       const diff = ref ? ((avg - ref) / ref) * 100 : 0;
-      delta.textContent = logged.length ? `${diff >= 0 ? '▲ +' : '▼ '}${fmt(diff, 1)}% vs TGT` : '—';
+      delta.textContent = logged.length ? `${diff >= 0 ? 'โ–ฒ +' : 'โ–ผ '}${fmt(diff, 1)}% vs TGT` : 'โ€”';
       delta.style.color = !logged.length ? C('mute') : Math.abs(diff) <= 5 ? C('good') : diff > 0 ? C('bad') : C('info');
     }
   }
@@ -1408,37 +1408,37 @@
     if (Math.abs(goal - cur) <= 3) { lo = Math.min(lo, goal); hi = Math.max(hi, goal); }
     spark($('#wChart'), {
       pts, trend, ref: goal, refLabel: `GOAL ${fmt(goal, 1)}`, min: lo - 0.6, max: hi + 0.6, color: 'acc2', unit: 'kg', dec: 1,
-      empty: 'ยังไม่มีข้อมูลน้ำหนักในช่วงนี้ · กด "บันทึกน้ำหนักวันนี้"',
+      empty: 'เธขเธฑเธเนเธกเนเธกเธตเธเนเธญเธกเธนเธฅเธเนเธณเธซเธเธฑเธเนเธเธเนเธงเธเธเธตเน ยท เธเธ” "เธเธฑเธเธ—เธถเธเธเนเธณเธซเธเธฑเธเธงเธฑเธเธเธตเน"',
     });
     const tr = all.length ? trendAt(all, all.length - 1) : null;
-    $('#wTrend').textContent = tr ? fmt(tr, 1) + ' kg' : '—';
+    $('#wTrend').textContent = tr ? fmt(tr, 1) + ' kg' : 'โ€”';
     const rate = weeklyRate(), rEl = $('#wRate'), pEl = $('#wRatePct'), badge = $('#rateBadge');
     const toGoal = cur - goal;
-    $('#wToGoal').textContent = Math.abs(toGoal) < 0.05 ? 'ถึงแล้ว 🎉' : `${fmt(Math.abs(toGoal), 1)} kg`;
-    let hint = 'บันทึกน้ำหนักอย่างน้อย 3 ครั้งใน 3 สัปดาห์ เพื่อคำนวณอัตราการเปลี่ยนแปลง';
+    $('#wToGoal').textContent = Math.abs(toGoal) < 0.05 ? 'เธ–เธถเธเนเธฅเนเธง ๐' : `${fmt(Math.abs(toGoal), 1)} kg`;
+    let hint = 'เธเธฑเธเธ—เธถเธเธเนเธณเธซเธเธฑเธเธญเธขเนเธฒเธเธเนเธญเธข 3 เธเธฃเธฑเนเธเนเธ 3 เธชเธฑเธเธ”เธฒเธซเน เน€เธเธทเนเธญเธเธณเธเธงเธ“เธญเธฑเธ•เธฃเธฒเธเธฒเธฃเน€เธเธฅเธตเนเธขเธเนเธเธฅเธ';
     if (rate == null) {
-      rEl.textContent = '—'; pEl.textContent = ''; $('#wEta').textContent = '';
+      rEl.textContent = 'โ€”'; pEl.textContent = ''; $('#wEta').textContent = '';
       badge.textContent = 'NEED DATA'; badge.style.color = C('mute'); badge.style.borderColor = C('line'); badge.style.background = 'transparent';
     } else {
       const pct = (rate / cur) * 100;
       rEl.textContent = `${rate > 0 ? '+' : ''}${fmt(rate, 2)} kg`; rEl.style.color = C('txt');
       pEl.textContent = `${pct > 0 ? '+' : ''}${fmt(pct, 2)}% BW`;
       const weeks = (rate !== 0 && Math.sign(-toGoal) === Math.sign(rate)) ? Math.abs(toGoal / rate) : null;
-      $('#wEta').textContent = weeks && Math.abs(toGoal) >= 0.05 ? `~${fmt(weeks, weeks < 10 ? 1 : 0)} สัปดาห์` : '';
+      $('#wEta').textContent = weeks && Math.abs(toGoal) >= 0.05 ? `~${fmt(weeks, weeks < 10 ? 1 : 0)} เธชเธฑเธเธ”เธฒเธซเน` : '';
       let st;
       if (profile.goal === 'bulk') {
-        st = pct < 0 ? ['LOSING', 'bad', 'น้ำหนักลดลงระหว่าง Bulk — เพิ่มคาร์บอีก 150–200 kcal/วัน']
-          : pct <= 0.5 ? ['OPTIMAL', 'good', 'เพิ่ม 0.25–0.5% ต่อสัปดาห์ = Lean Bulk ที่ได้กล้ามมากที่สุด ไขมันน้อยที่สุด']
-          : ['TOO FAST', 'warm', 'ขึ้นเร็วเกิน 0.5%/สัปดาห์ ส่วนเกินมักเป็นไขมัน — ลดลงสัก 150 kcal/วัน'];
+        st = pct < 0 ? ['LOSING', 'bad', 'เธเนเธณเธซเธเธฑเธเธฅเธ”เธฅเธเธฃเธฐเธซเธงเนเธฒเธ Bulk โ€” เน€เธเธดเนเธกเธเธฒเธฃเนเธเธญเธตเธ 150โ€“200 kcal/เธงเธฑเธ']
+          : pct <= 0.5 ? ['OPTIMAL', 'good', 'เน€เธเธดเนเธก 0.25โ€“0.5% เธ•เนเธญเธชเธฑเธเธ”เธฒเธซเน = Lean Bulk เธ—เธตเนเนเธ”เนเธเธฅเนเธฒเธกเธกเธฒเธเธ—เธตเนเธชเธธเธ” เนเธเธกเธฑเธเธเนเธญเธขเธ—เธตเนเธชเธธเธ”']
+          : ['TOO FAST', 'warm', 'เธเธถเนเธเน€เธฃเนเธงเน€เธเธดเธ 0.5%/เธชเธฑเธเธ”เธฒเธซเน เธชเนเธงเธเน€เธเธดเธเธกเธฑเธเน€เธเนเธเนเธเธกเธฑเธ โ€” เธฅเธ”เธฅเธเธชเธฑเธ 150 kcal/เธงเธฑเธ'];
       } else if (profile.goal === 'maintain') {
-        st = Math.abs(pct) <= 0.25 ? ['STABLE', 'good', 'น้ำหนักคงที่ดีมาก — รักษาวินัยนี้ไว้'] : [pct > 0 ? 'DRIFTING UP' : 'DRIFTING DOWN', 'warm', 'น้ำหนักเคลื่อนเกิน ±0.25%/สัปดาห์ ปรับแคลอรี่ ±100–150 kcal'];
+        st = Math.abs(pct) <= 0.25 ? ['STABLE', 'good', 'เธเนเธณเธซเธเธฑเธเธเธเธ—เธตเนเธ”เธตเธกเธฒเธ โ€” เธฃเธฑเธเธฉเธฒเธงเธดเธเธฑเธขเธเธตเนเนเธงเน'] : [pct > 0 ? 'DRIFTING UP' : 'DRIFTING DOWN', 'warm', 'เธเนเธณเธซเธเธฑเธเน€เธเธฅเธทเนเธญเธเน€เธเธดเธ ยฑ0.25%/เธชเธฑเธเธ”เธฒเธซเน เธเธฃเธฑเธเนเธเธฅเธญเธฃเธตเน ยฑ100โ€“150 kcal'];
       } else {
-        st = pct > 0 ? ['GAINING', 'bad', 'แนวโน้มขึ้นระหว่าง Cut — ตรวจน้ำมันแฝง/ของว่างที่ไม่ได้บันทึก']
-          : pct >= -0.5 ? ['SLOW', 'info', 'ลดช้ากว่า 0.5%/สัปดาห์ — ถ้าต่อเนื่อง 2 สัปดาห์ ลองลดอีก 100–150 kcal']
-          : pct >= -1 ? ['OPTIMAL', 'good', 'ลด 0.5–1% ต่อสัปดาห์ = โซนที่รักษากล้ามเนื้อได้ดีที่สุด 🔥']
-          : ['TOO FAST', 'warm', 'ลดเร็วเกิน 1%/สัปดาห์ เสี่ยงเสียกล้าม — เพิ่มแคลอรี่เล็กน้อยและรักษาโปรตีนให้ถึงเป้า'];
+        st = pct > 0 ? ['GAINING', 'bad', 'เนเธเธงเนเธเนเธกเธเธถเนเธเธฃเธฐเธซเธงเนเธฒเธ Cut โ€” เธ•เธฃเธงเธเธเนเธณเธกเธฑเธเนเธเธ/เธเธญเธเธงเนเธฒเธเธ—เธตเนเนเธกเนเนเธ”เนเธเธฑเธเธ—เธถเธ']
+          : pct >= -0.5 ? ['SLOW', 'info', 'เธฅเธ”เธเนเธฒเธเธงเนเธฒ 0.5%/เธชเธฑเธเธ”เธฒเธซเน โ€” เธ–เนเธฒเธ•เนเธญเน€เธเธทเนเธญเธ 2 เธชเธฑเธเธ”เธฒเธซเน เธฅเธญเธเธฅเธ”เธญเธตเธ 100โ€“150 kcal']
+          : pct >= -1 ? ['OPTIMAL', 'good', 'เธฅเธ” 0.5โ€“1% เธ•เนเธญเธชเธฑเธเธ”เธฒเธซเน = เนเธเธเธ—เธตเนเธฃเธฑเธเธฉเธฒเธเธฅเนเธฒเธกเน€เธเธทเนเธญเนเธ”เนเธ”เธตเธ—เธตเนเธชเธธเธ” ๐”ฅ']
+          : ['TOO FAST', 'warm', 'เธฅเธ”เน€เธฃเนเธงเน€เธเธดเธ 1%/เธชเธฑเธเธ”เธฒเธซเน เน€เธชเธตเนเธขเธเน€เธชเธตเธขเธเธฅเนเธฒเธก โ€” เน€เธเธดเนเธกเนเธเธฅเธญเธฃเธตเนเน€เธฅเนเธเธเนเธญเธขเนเธฅเธฐเธฃเธฑเธเธฉเธฒเนเธเธฃเธ•เธตเธเนเธซเนเธ–เธถเธเน€เธเนเธฒ'];
       }
-      badge.textContent = '● ' + st[0]; badge.style.color = C(st[1]); badge.style.borderColor = C(st[1], 0.45); badge.style.background = C(st[1], 0.1);
+      badge.textContent = 'โ— ' + st[0]; badge.style.color = C(st[1]); badge.style.borderColor = C(st[1], 0.45); badge.style.background = C(st[1], 0.1);
       hint = st[2];
     }
     $('#wHint').textContent = hint;
@@ -1448,8 +1448,8 @@
   function renderAlloc() {
     const c = calc(profile), t = totals(mealsOn(dayKey()));
     const rows = [
-      { k: 'Fiber', th: 'ไฟเบอร์', v: t.fiber, tg: c.fiber, u: 'g', col: 'good' },
-      { k: 'Sodium', th: 'โซเดียม (ไม่เกิน)', v: t.sodium, tg: c.sodium, u: 'mg', col: 'soft', limit: true },
+      { k: 'Fiber', th: 'เนเธเน€เธเธญเธฃเน', v: t.fiber, tg: c.fiber, u: 'g', col: 'good' },
+      { k: 'Sodium', th: 'เนเธเน€เธ”เธตเธขเธก (เนเธกเนเน€เธเธดเธ)', v: t.sodium, tg: c.sodium, u: 'mg', col: 'soft', limit: true },
     ];
     $('#allocRows').innerHTML = rows.map((r) => {
       const pct = r.tg > 0 ? (r.v / r.tg) * 100 : 0, over = pct > 100;
@@ -1474,14 +1474,14 @@
       return `<div class="flex items-center gap-2.5">
         <span class="h-2 w-2 rounded-full shrink-0" style="background:${C(col)}"></span>
         <div class="min-w-0 flex-1">
-          <div class="flex items-baseline justify-between gap-2"><span class="th text-[13px] font-medium">${{ Protein: 'โปรตีน', Carbs: 'คาร์บ', Fats: 'ไขมัน' }[en]}</span><span class="num text-[12.5px]"><span class="font-semibold">${fmt(v)}</span><span class="text-mute"> / ${fmt(tg)}g</span></span></div>
-          <div class="th text-[10.5px] leading-snug" style="color:${left >= 0 ? C('mute') : more ? C('good') : C('bad')}">${left >= 0 ? `เหลืออีก ${fmt(left)}g` : `เกินเป้า ${fmt(-left)}g`}</div>
+          <div class="flex items-baseline justify-between gap-2"><span class="th text-[13px] font-medium">${{ Protein: 'เนเธเธฃเธ•เธตเธ', Carbs: 'เธเธฒเธฃเนเธ', Fats: 'เนเธเธกเธฑเธ' }[en]}</span><span class="num text-[12.5px]"><span class="font-semibold">${fmt(v)}</span><span class="text-mute"> / ${fmt(tg)}g</span></span></div>
+          <div class="th text-[10.5px] leading-snug" style="color:${left >= 0 ? C('mute') : more ? C('good') : C('bad')}">${left >= 0 ? `เน€เธซเธฅเธทเธญเธญเธตเธ ${fmt(left)}g` : `เน€เธเธดเธเน€เธเนเธฒ ${fmt(-left)}g`}</div>
         </div></div>`;
     }).join('');
     const kp = t.p * 4, kc = t.c * 4, kf = t.f * 9, sum = kp + kc + kf;
     $('#splitLegend').innerHTML = sum > 0
-      ? `<span style="color:${C('acc2')}">P ${fmt((kp / sum) * 100)}%</span> · <span style="color:${C('info')}">C ${fmt((kc / sum) * 100)}%</span> · <span style="color:${C('warm')}">F ${fmt((kf / sum) * 100)}%</span>`
-      : '<span class="text-mute th">ยังไม่มีข้อมูลวันนี้</span>';
+      ? `<span style="color:${C('acc2')}">P ${fmt((kp / sum) * 100)}%</span> ยท <span style="color:${C('info')}">C ${fmt((kc / sum) * 100)}%</span> ยท <span style="color:${C('warm')}">F ${fmt((kf / sum) * 100)}%</span>`
+      : '<span class="text-mute th">เธขเธฑเธเนเธกเนเธกเธตเธเนเธญเธกเธนเธฅเธงเธฑเธเธเธตเน</span>';
   }
 
   function mealIcon(m) {
@@ -1501,8 +1501,8 @@
           <div class="mx-auto h-11 w-11 rounded-2xl border border-dashed border-line grid place-items-center text-mute">
             <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>
           </div>
-          <p class="th text-[13px] mt-3">ยังไม่มีรายการ</p>
-          <p class="th text-[11px] text-mute mt-1">กดปุ่ม <span class="text-acc2 font-bold">+</span> ด้านล่างเพื่อสแกนมื้อแรก</p>
+          <p class="th text-[13px] mt-3">เธขเธฑเธเนเธกเนเธกเธตเธฃเธฒเธขเธเธฒเธฃ</p>
+          <p class="th text-[11px] text-mute mt-1">เธเธ”เธเธธเนเธก <span class="text-acc2 font-bold">+</span> เธ”เนเธฒเธเธฅเนเธฒเธเน€เธเธทเนเธญเธชเนเธเธเธกเธทเนเธญเนเธฃเธ</p>
         </div>`;
       return;
     }
@@ -1511,7 +1511,7 @@
       const k = dayKey(m.ts); let head = '';
       if (logFilter !== 'today' && k !== lastDay) {
         lastDay = k; const dt = totals(mealsOn(k));
-        head = `<div class="flex items-center justify-between px-5 pt-4 pb-1 num text-[11px] text-mute"><span>${k === today ? 'TODAY' : esc(dateStr(m.ts))}</span><span>${fmt(dt.kcal)} kcal · P ${fmt(dt.p)}g</span></div>`;
+        head = `<div class="flex items-center justify-between px-5 pt-4 pb-1 num text-[11px] text-mute"><span>${k === today ? 'TODAY' : esc(dateStr(m.ts))}</span><span>${fmt(dt.kcal)} kcal ยท P ${fmt(dt.p)}g</span></div>`;
       }
       const mps = m.mps ?? num(m.p) >= MPS_PROTEIN_G;
       const tag = (txt, col) => `<span class="chip !text-[8.5px] !px-1.5 !py-0" style="color:${C(col)};border-color:${C(col, 0.35)}">${txt}</span>`;
@@ -1523,13 +1523,13 @@
             <div class="th text-[13.5px] font-medium truncate">${esc(m.name)}</div>
             <div class="mt-1 flex items-center gap-1.5 flex-wrap">
               <span class="num text-[10.5px] text-mute">${timeStr(m.ts)}</span>
-              <span class="chip num !text-[9px] !px-1.5 !py-0" style="color:${mps ? C('good') : C('soft')};border-color:${mps ? C('good', 0.4) : C('line')};background:${mps ? C('good', 0.1) : 'transparent'}">P ${fmt(m.p)}g${mps ? ' ✓' : ''}</span>
+              <span class="chip num !text-[9px] !px-1.5 !py-0" style="color:${mps ? C('good') : C('soft')};border-color:${mps ? C('good', 0.4) : C('line')};background:${mps ? C('good', 0.1) : 'transparent'}">P ${fmt(m.p)}g${mps ? ' โ“' : ''}</span>
               ${src}
             </div>
           </div>
           <div class="text-right shrink-0">
             <div class="num text-[14px] font-semibold">${fmt(m.kcal)} <span class="text-[11px] font-normal text-mute">kcal</span></div>
-            <div class="num text-[10px] text-mute mt-0.5">C ${fmt(m.c)} · F ${fmt(m.f)}</div>
+            <div class="num text-[10px] text-mute mt-0.5">C ${fmt(m.c)} ยท F ${fmt(m.f)}</div>
           </div>
         </button>`;
     }).join('');
@@ -1557,14 +1557,14 @@
     const c = calc(profile), list = mealsOn(dayKey()), t = totals(list);
     const budget = c.target + num(burn[dayKey()]), hr = new Date().getHours(), pPct = t.p / c.protein;
     let s;
-    if (!list.length) s = ['READY', 'info', 'ยังไม่มีบันทึกวันนี้ — เริ่มต้นวันด้วยมื้อที่มีโปรตีน ≥ 25g เพื่อกระตุ้น MPS'];
-    else if (t.kcal > budget) s = ['OVER BUDGET', 'bad', `เกินงบแคลอรี่ ${fmt(t.kcal - budget)} kcal — มื้อถัดไปเน้นผัก + โปรตีนลีน ไม่ต้องชดเชยด้วยการอด`];
-    else if (t.sodium > SODIUM_LIMIT) s = ['SODIUM ALERT', 'bad', `โซเดียม ${fmt(t.sodium)} mg เกินลิมิต — ดื่มน้ำเพิ่ม น้ำหนักพรุ่งนี้อาจขึ้นจากน้ำ ไม่ใช่ไขมัน`];
-    else if (hr >= 17 && pPct < 0.7) s = ['PROTEIN LOW', 'acc2', `โปรตีนยังขาด ${fmt(c.protein - t.p)} g — เติมอกไก่/ไข่ขาว/เวย์ในมื้อเย็น`];
-    else if (t.kcal > budget * 0.9) s = ['NEAR LIMIT', 'warm', `เหลืออีก ${fmt(budget - t.kcal)} kcal — เลือกมื้อเบาที่โปรตีนสูง`];
-    else s = ['ON TRACK', 'good', `คงเหลือ ${fmt(budget - t.kcal)} kcal · โปรตีน ${fmt(pPct * 100)}% ของเป้า — วินัยดีมาก`];
+    if (!list.length) s = ['READY', 'info', 'เธขเธฑเธเนเธกเนเธกเธตเธเธฑเธเธ—เธถเธเธงเธฑเธเธเธตเน โ€” เน€เธฃเธดเนเธกเธ•เนเธเธงเธฑเธเธ”เนเธงเธขเธกเธทเนเธญเธ—เธตเนเธกเธตเนเธเธฃเธ•เธตเธ โฅ 25g เน€เธเธทเนเธญเธเธฃเธฐเธ•เธธเนเธ MPS'];
+    else if (t.kcal > budget) s = ['OVER BUDGET', 'bad', `เน€เธเธดเธเธเธเนเธเธฅเธญเธฃเธตเน ${fmt(t.kcal - budget)} kcal โ€” เธกเธทเนเธญเธ–เธฑเธ”เนเธเน€เธเนเธเธเธฑเธ + เนเธเธฃเธ•เธตเธเธฅเธตเธ เนเธกเนเธ•เนเธญเธเธเธ”เน€เธเธขเธ”เนเธงเธขเธเธฒเธฃเธญเธ”`];
+    else if (t.sodium > SODIUM_LIMIT) s = ['SODIUM ALERT', 'bad', `เนเธเน€เธ”เธตเธขเธก ${fmt(t.sodium)} mg เน€เธเธดเธเธฅเธดเธกเธดเธ• โ€” เธ”เธทเนเธกเธเนเธณเน€เธเธดเนเธก เธเนเธณเธซเธเธฑเธเธเธฃเธธเนเธเธเธตเนเธญเธฒเธเธเธถเนเธเธเธฒเธเธเนเธณ เนเธกเนเนเธเนเนเธเธกเธฑเธ`];
+    else if (hr >= 17 && pPct < 0.7) s = ['PROTEIN LOW', 'acc2', `เนเธเธฃเธ•เธตเธเธขเธฑเธเธเธฒเธ” ${fmt(c.protein - t.p)} g โ€” เน€เธ•เธดเธกเธญเธเนเธเน/เนเธเนเธเธฒเธง/เน€เธงเธขเนเนเธเธกเธทเนเธญเน€เธขเนเธ`];
+    else if (t.kcal > budget * 0.9) s = ['NEAR LIMIT', 'warm', `เน€เธซเธฅเธทเธญเธญเธตเธ ${fmt(budget - t.kcal)} kcal โ€” เน€เธฅเธทเธญเธเธกเธทเนเธญเน€เธเธฒเธ—เธตเนเนเธเธฃเธ•เธตเธเธชเธนเธ`];
+    else s = ['ON TRACK', 'good', `เธเธเน€เธซเธฅเธทเธญ ${fmt(budget - t.kcal)} kcal ยท เนเธเธฃเธ•เธตเธ ${fmt(pPct * 100)}% เธเธญเธเน€เธเนเธฒ โ€” เธงเธดเธเธฑเธขเธ”เธตเธกเธฒเธ`];
     const b = $('#statusBadge');
-    b.textContent = '● ' + s[0]; b.style.color = C(s[1]); b.style.borderColor = C(s[1], 0.4); b.style.background = C(s[1], 0.08);
+    b.textContent = 'โ— ' + s[0]; b.style.color = C(s[1]); b.style.borderColor = C(s[1], 0.4); b.style.background = C(s[1], 0.08);
     $('#statusHint').textContent = s[2];
   }
 
@@ -1581,7 +1581,7 @@
       $('#pName').value = draft.name || ''; $('#pAge').value = draft.age; $('#pHeight').value = draft.height; $('#pWeight').value = draft.weight;
       $('#pGoalW').value = num(draft.goalWeight) > 0 ? draft.goalWeight : ''; $('#pActivity').value = String(draft.activity);
     }
-    $('#pGoalW').placeholder = `แนะนำ ${fmt(defaultGoalWeight(draft, num(draft.weight)), 1)} kg`;
+    $('#pGoalW').placeholder = `เนเธเธฐเธเธณ ${fmt(defaultGoalWeight(draft, num(draft.weight)), 1)} kg`;
     $$('#pSex [data-v]').forEach((b) => b.classList.toggle('on', b.dataset.v === draft.sex));
     $$('#pGoal [data-v]').forEach((b) => b.classList.toggle('on', b.dataset.v === draft.goal));
     $$('#pDiet [data-v]').forEach((b) => b.classList.toggle('on', b.dataset.v === draft.dietType));
@@ -1590,9 +1590,9 @@
     $('#cvBmr').textContent = fmt(c.bmr); $('#cvTdee').textContent = fmt(c.tdee); $('#cvTarget').textContent = fmt(c.target);
     $('#cvP').textContent = fmt(c.protein) + 'g'; $('#cvF').textContent = fmt(c.fat) + 'g'; $('#cvC').textContent = fmt(c.carbs) + 'g'; $('#cvFb').textContent = fmt(c.fiber) + 'g';
     const warns = [];
-    if (c.carbs < 100) warns.push('คาร์บต่ำกว่า 100g อาจกระทบประสิทธิภาพการซ้อม ลองลด Deficit หรือเพิ่มระดับกิจกรรม');
-    if (draft.sex === 'female' ? c.target < 1200 : c.target < 1500) warns.push('Target ต่ำกว่าค่าขั้นต่ำที่แนะนำ ควรปรึกษาผู้เชี่ยวชาญ');
-    $('#cvWarn').textContent = warns.join(' · ');
+    if (c.carbs < 100) warns.push('เธเธฒเธฃเนเธเธ•เนเธณเธเธงเนเธฒ 100g เธญเธฒเธเธเธฃเธฐเธ—เธเธเธฃเธฐเธชเธดเธ—เธเธดเธ เธฒเธเธเธฒเธฃเธเนเธญเธก เธฅเธญเธเธฅเธ” Deficit เธซเธฃเธทเธญเน€เธเธดเนเธกเธฃเธฐเธ”เธฑเธเธเธดเธเธเธฃเธฃเธก');
+    if (draft.sex === 'female' ? c.target < 1200 : c.target < 1500) warns.push('Target เธ•เนเธณเธเธงเนเธฒเธเนเธฒเธเธฑเนเธเธ•เนเธณเธ—เธตเนเนเธเธฐเธเธณ เธเธงเธฃเธเธฃเธถเธเธฉเธฒเธเธนเนเน€เธเธตเนเธขเธงเธเธฒเธ');
+    $('#cvWarn').textContent = warns.join(' ยท ');
     const pb = bodyParams(draft, num(draft.weight, 70));
     $('#pPreview').innerHTML = charSVG(pb, { uid: 'pv', tier: 0 });
   }
@@ -1609,15 +1609,15 @@
   $('#btnProfile').addEventListener('click', openProfile);
   $('#pSave').addEventListener('click', () => {
     const bad = !(draft.age >= 13 && draft.age <= 90) || !(draft.height >= 120 && draft.height <= 230) || !(draft.weight >= 30 && draft.weight <= 250) || (draft.goalWeight != null && !(draft.goalWeight >= 30 && draft.goalWeight <= 250));
-    if (bad) return toast('กรุณากรอก อายุ 13–90, ส่วนสูง 120–230 cm, น้ำหนัก 30–250 kg', 'bad');
+    if (bad) return toast('เธเธฃเธธเธ“เธฒเธเธฃเธญเธ เธญเธฒเธขเธธ 13โ€“90, เธชเนเธงเธเธชเธนเธ 120โ€“230 cm, เธเนเธณเธซเธเธฑเธ 30โ€“250 kg', 'bad');
     const changedW = !wEntries().length || Math.abs(draft.weight - currentWeight()) >= 0.05;
     profile = { ...draft }; save(KEYS.profile, profile);
     if (changedW) setWeight(dayKey(), draft.weight);
-    closeModal('mProfile'); renderAll(); toast('บันทึกโปรไฟล์แล้ว · Target ' + fmt(calc(profile).target) + ' kcal');
+    closeModal('mProfile'); renderAll(); toast('เธเธฑเธเธ—เธถเธเนเธเธฃเนเธเธฅเนเนเธฅเนเธง ยท Target ' + fmt(calc(profile).target) + ' kcal');
   });
   $('#modeSelect').addEventListener('change', (e) => {
     profile.goal = e.target.value; save(KEYS.profile, profile); renderAll();
-    toast('เปลี่ยนโหมดเป็น ' + e.target.options[e.target.selectedIndex].text, 'acc');
+    toast('เน€เธเธฅเธตเนเธขเธเนเธซเธกเธ”เน€เธเนเธ ' + e.target.options[e.target.selectedIndex].text, 'acc');
   });
 
   // =========================================================================
@@ -1630,16 +1630,16 @@
       return `<div class="flex items-center justify-between py-2 text-[12.5px]">
         <span class="num text-soft">${esc(new Date(e.t).toLocaleDateString('th-TH', { weekday: 'short', day: 'numeric', month: 'short' }))}</span>
         <span class="flex items-center gap-3"><span class="num font-bold">${fmt(e.kg, 1)} kg</span>
-        <span class="num text-[11px] w-12 text-right" style="color:${!prev ? C('mute') : d < 0 ? C('good') : d > 0 ? C('bad') : C('mute')}">${prev ? (d > 0 ? '+' : '') + fmt(d, 1) : '—'}</span>
-        <button data-wdel="${e.d}" class="h-6 w-6 rounded-full border border-line text-mute text-[11px] hover:text-bad hover:border-bad">✕</button></span></div>`;
-    }).join('') : '<p class="text-[12px] text-mute py-2">ยังไม่มีประวัติ</p>';
+        <span class="num text-[11px] w-12 text-right" style="color:${!prev ? C('mute') : d < 0 ? C('good') : d > 0 ? C('bad') : C('mute')}">${prev ? (d > 0 ? '+' : '') + fmt(d, 1) : 'โ€”'}</span>
+        <button data-wdel="${e.d}" class="h-6 w-6 rounded-full border border-line text-mute text-[11px] hover:text-bad hover:border-bad">โ•</button></span></div>`;
+    }).join('') : '<p class="text-[12px] text-mute py-2">เธขเธฑเธเนเธกเนเธกเธตเธเธฃเธฐเธงเธฑเธ•เธด</p>';
   }
   function syncWPrev() {
     const d = $('#wDate').value, kg = num($('#wInput').value);
     const before = wEntries().filter((e) => e.d < d).pop();
     $('#wPrevInfo').innerHTML = before
-      ? `ครั้งก่อน (${esc(dateStr(before.t))}): <b class="num">${fmt(before.kg, 1)} kg</b> · เปลี่ยนแปลง <b class="num" style="color:${kg - before.kg <= 0 ? C('good') : C('bad')}">${kg - before.kg > 0 ? '+' : ''}${fmt(kg - before.kg, 1)} kg</b>`
-      : 'นี่คือการบันทึกครั้งแรก — จะใช้เป็นจุดเริ่มต้นของการเดินทาง 🏕️';
+      ? `เธเธฃเธฑเนเธเธเนเธญเธ (${esc(dateStr(before.t))}): <b class="num">${fmt(before.kg, 1)} kg</b> ยท เน€เธเธฅเธตเนเธขเธเนเธเธฅเธ <b class="num" style="color:${kg - before.kg <= 0 ? C('good') : C('bad')}">${kg - before.kg > 0 ? '+' : ''}${fmt(kg - before.kg, 1)} kg</b>`
+      : 'เธเธตเนเธเธทเธญเธเธฒเธฃเธเธฑเธเธ—เธถเธเธเธฃเธฑเนเธเนเธฃเธ โ€” เธเธฐเนเธเนเน€เธเนเธเธเธธเธ”เน€เธฃเธดเนเธกเธ•เนเธเธเธญเธเธเธฒเธฃเน€เธ”เธดเธเธ—เธฒเธ ๐•๏ธ';
   }
   function openWeigh() {
     $('#wDate').value = dayKey(); $('#wDate').max = dayKey();
@@ -1652,14 +1652,14 @@
   $$('[data-step]').forEach((b) => b.addEventListener('click', () => { $('#wInput').value = (num($('#wInput').value, currentWeight()) + Number(b.dataset.step)).toFixed(1); syncWPrev(); }));
   $('#wSave').addEventListener('click', () => {
     const kg = num($('#wInput').value), d = $('#wDate').value || dayKey();
-    if (!(kg >= 30 && kg <= 250)) return toast('น้ำหนักต้องอยู่ระหว่าง 30–250 kg', 'bad');
-    if (d > dayKey()) return toast('บันทึกล่วงหน้าไม่ได้', 'bad');
+    if (!(kg >= 30 && kg <= 250)) return toast('เธเนเธณเธซเธเธฑเธเธ•เนเธญเธเธญเธขเธนเนเธฃเธฐเธซเธงเนเธฒเธ 30โ€“250 kg', 'bad');
+    if (d > dayKey()) return toast('เธเธฑเธเธ—เธถเธเธฅเนเธงเธเธซเธเนเธฒเนเธกเนเนเธ”เน', 'bad');
     const prevCur = currentWeight(), tierBefore = tierOf(progressOf(startWeight(), prevCur, goalWeight()));
     setWeight(d, kg); closeModal('mWeight'); renderAll();
     const tierAfter = tierOf(progressOf(startWeight(), currentWeight(), goalWeight())), diff = currentWeight() - prevCur;
     buzz(10); setTimeout(() => replay($('#charBox'), 'ch-jump'), 500);
     if (tierAfter > tierBefore) setTimeout(() => celebrate(tierAfter), 900);
-    else toast(Math.abs(diff) < 0.05 ? `บันทึก ${fmt(kg, 1)} kg แล้ว` : `บันทึกแล้ว · ${diff > 0 ? '+' : ''}${fmt(diff, 1)} kg`, diff <= 0 ? 'good' : 'info');
+    else toast(Math.abs(diff) < 0.05 ? `เธเธฑเธเธ—เธถเธ ${fmt(kg, 1)} kg เนเธฅเนเธง` : `เธเธฑเธเธ—เธถเธเนเธฅเนเธง ยท ${diff > 0 ? '+' : ''}${fmt(diff, 1)} kg`, diff <= 0 ? 'good' : 'info');
     $('#secHero').scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
   $('#wList').addEventListener('click', (e) => {
@@ -1669,7 +1669,7 @@
     profile.weight = currentWeight(); save(KEYS.profile, profile);
     renderWeightList(); syncWPrev(); renderAll();
   });
-  $('#btnGhost').addEventListener('click', () => { showGhost = !showGhost; save(KEYS.ghost, showGhost); renderHero(); toast(showGhost ? 'แสดงเงาร่างตอนเริ่มต้น' : 'ซ่อนเงาร่างตอนเริ่มต้น', 'info'); });
+  $('#btnGhost').addEventListener('click', () => { showGhost = !showGhost; save(KEYS.ghost, showGhost); renderHero(); toast(showGhost ? 'เนเธชเธ”เธเน€เธเธฒเธฃเนเธฒเธเธ•เธญเธเน€เธฃเธดเนเธกเธ•เนเธ' : 'เธเนเธญเธเน€เธเธฒเธฃเนเธฒเธเธ•เธญเธเน€เธฃเธดเนเธกเธ•เนเธ', 'info'); });
 
   // =========================================================================
   // SETTINGS
@@ -1733,12 +1733,12 @@
     openModal('mSettings');
   });
   $$('[data-toggle-pw]').forEach((b) => b.addEventListener('click', () => {
-    const i = $('#' + b.dataset.togglePw); i.type = i.type === 'password' ? 'text' : 'password'; b.textContent = i.type === 'password' ? 'แสดง' : 'ซ่อน';
+    const i = $('#' + b.dataset.togglePw); i.type = i.type === 'password' ? 'text' : 'password'; b.textContent = i.type === 'password' ? 'เนเธชเธ”เธ' : 'เธเนเธญเธ';
   }));
   $('#sSaveKey').addEventListener('click', () => {
     const sel = $('#sModel').value, model = sel === 'custom' ? ($('#sModelCustom').value.trim() || DEFAULT_MODEL) : sel;
     save(KEYS.apiKey, $('#sKey').value.trim()); save(KEYS.model, model);
-    syncKeyState(); toast('บันทึก API แล้ว · ' + model); closeModal('mSettings');
+    syncKeyState(); toast('เธเธฑเธเธ—เธถเธ API เนเธฅเนเธง ยท ' + model); closeModal('mSettings');
   });
   $('#sExport').addEventListener('click', () => {
     const blob = new Blob([JSON.stringify({ app: 'nutri-journal', v: 2, profile, meals, burn, weights }, null, 2)], { type: 'application/json' });
@@ -1752,15 +1752,15 @@
       if (!Array.isArray(d.meals)) throw new Error('bad');
       profile = { ...DEFAULT_PROFILE, ...(d.profile || {}) }; meals = d.meals; burn = d.burn || {}; weights = d.weights || {};
       save(KEYS.profile, profile); save(KEYS.meals, meals); save(KEYS.burn, burn); save(KEYS.weights, weights);
-      heroF = null; heroSig = ''; renderAll(); closeModal('mSettings'); toast(`นำเข้า ${meals.length} มื้อ · ${Object.keys(weights).length} น้ำหนัก`);
-    } catch { toast('ไฟล์ไม่ถูกต้อง', 'bad'); }
+      heroF = null; heroSig = ''; renderAll(); closeModal('mSettings'); toast(`เธเธณเน€เธเนเธฒ ${meals.length} เธกเธทเนเธญ ยท ${Object.keys(weights).length} เธเนเธณเธซเธเธฑเธ`);
+    } catch { toast('เนเธเธฅเนเนเธกเนเธ–เธนเธเธ•เนเธญเธ', 'bad'); }
     e.target.value = '';
   });
   $('#sReset').addEventListener('click', () => {
-    if (!confirm('ลบประวัติมื้ออาหาร น้ำหนัก และโปรไฟล์ทั้งหมด? (API Key และธีมจะยังอยู่)')) return;
+    if (!confirm('เธฅเธเธเธฃเธฐเธงเธฑเธ•เธดเธกเธทเนเธญเธญเธฒเธซเธฒเธฃ เธเนเธณเธซเธเธฑเธ เนเธฅเธฐเนเธเธฃเนเธเธฅเนเธ—เธฑเนเธเธซเธกเธ”? (API Key เนเธฅเธฐเธเธตเธกเธเธฐเธขเธฑเธเธญเธขเธนเน)')) return;
     meals = []; burn = {}; weights = {}; profile = { ...DEFAULT_PROFILE };
     [KEYS.meals, KEYS.burn, KEYS.profile, KEYS.weights, KEYS.sampleW].forEach((k) => localStorage.removeItem(k));
-    heroF = null; heroSig = ''; renderAll(); closeModal('mSettings'); toast('ล้างข้อมูลแล้ว', 'bad');
+    heroF = null; heroSig = ''; renderAll(); closeModal('mSettings'); toast('เธฅเนเธฒเธเธเนเธญเธกเธนเธฅเนเธฅเนเธง', 'bad');
   });
   $('#sSample').addEventListener('click', () => {
     const c = calc(profile), out = [];
@@ -1790,7 +1790,7 @@
     save(KEYS.sampleW, added); save(KEYS.weights, weights); save(KEYS.meals, meals);
     profile.weight = currentWeight(); profile.startWeight = wEntries()[0]?.kg ?? null; save(KEYS.profile, profile);
     range = '1M'; save(KEYS.range, range); heroF = null; heroSig = ''; renderAll(); closeModal('mSettings');
-    toast(`โหลดตัวอย่าง ${out.length} มื้อ · ${added.length} น้ำหนัก`, 'acc');
+    toast(`เนเธซเธฅเธ”เธ•เธฑเธงเธญเธขเนเธฒเธ ${out.length} เธกเธทเนเธญ ยท ${added.length} เธเนเธณเธซเธเธฑเธ`, 'acc');
   });
 
   // =========================================================================
@@ -1800,7 +1800,7 @@
   $('#burnQuick').addEventListener('click', (e) => { const b = e.target.closest('[data-b]'); if (!b) return; const v = Number(b.dataset.b); $('#burnInput').value = v === 0 ? 0 : num($('#burnInput').value) + v; });
   $('#burnSave').addEventListener('click', () => {
     burn[dayKey()] = clamp(Math.round(num($('#burnInput').value)), 0, 5000); save(KEYS.burn, burn);
-    closeModal('mBurn'); renderAll(); toast(`บันทึกการเผาผลาญ +${fmt(burn[dayKey()])} kcal`, 'info');
+    closeModal('mBurn'); renderAll(); toast(`เธเธฑเธเธ—เธถเธเธเธฒเธฃเน€เธเธฒเธเธฅเธฒเธ +${fmt(burn[dayKey()])} kcal`, 'info');
   });
 
   // =========================================================================
@@ -1815,28 +1815,28 @@
         ${m.thumb ? `<img src="${m.thumb}" class="h-16 w-16 rounded-2xl object-cover border border-line" alt="" />` : ''}
         <div class="min-w-0 flex-1">
           <div class="text-[17px] font-semibold leading-snug">${esc(m.name)}</div>
-          ${num(m.weight) > 0 ? `<div class="num text-[11px] text-mute mt-1">~${fmt(m.weight)} g · น้ำมันแฝง ${fmt(m.oil, 1)} tbsp <span class="text-warm">(+${fmt(oilKcal)} kcal)</span></div>` : ''}
+          ${num(m.weight) > 0 ? `<div class="num text-[11px] text-mute mt-1">~${fmt(m.weight)} g ยท เธเนเธณเธกเธฑเธเนเธเธ ${fmt(m.oil, 1)} tbsp <span class="text-warm">(+${fmt(oilKcal)} kcal)</span></div>` : ''}
         </div>
       </div>
       <div class="mt-4 rounded-2xl border border-line bg-ink/40 p-4">
         <div class="flex items-end justify-between">
           <div><div class="eyebrow !text-[9px]">Energy</div><div class="disp text-[36px] leading-none mt-1">${fmt(m.kcal)} <span class="num text-[13px] text-mute font-medium">kcal</span></div></div>
-          <span class="chip num" style="color:${mps ? C('good') : C('soft')};border-color:${mps ? C('good', 0.4) : C('line')};background:${mps ? C('good', 0.1) : 'transparent'}">MPS ${mps ? 'REACHED ✓' : 'BELOW 25g'}</span>
+          <span class="chip num" style="color:${mps ? C('good') : C('soft')};border-color:${mps ? C('good', 0.4) : C('line')};background:${mps ? C('good', 0.1) : 'transparent'}">MPS ${mps ? 'REACHED โ“' : 'BELOW 25g'}</span>
         </div>
         <div class="mt-4 grid grid-cols-3 gap-2 num">${cell('PROTEIN', fmt(m.p), 'g', 'acc2')}${cell('CARBS', fmt(m.c), 'g', 'info')}${cell('FAT', fmt(m.f), 'g', 'warm')}</div>
-        <div class="mt-2 grid grid-cols-3 gap-2 num">${cell('FIBER', fmt(m.fiber), 'g', 'good', false)}${cell('SODIUM', fmt(m.sodium), 'mg', num(m.sodium) > 1000 ? 'bad' : 'txt', false)}${cell('SATIETY', esc(m.satiety || '—'), '', satCol, false)}</div>
+        <div class="mt-2 grid grid-cols-3 gap-2 num">${cell('FIBER', fmt(m.fiber), 'g', 'good', false)}${cell('SODIUM', fmt(m.sodium), 'mg', num(m.sodium) > 1000 ? 'bad' : 'txt', false)}${cell('SATIETY', esc(m.satiety || 'โ€”'), '', satCol, false)}</div>
       </div>
-      ${m.tip ? `<div class="mt-3 rounded-2xl border border-acc/40 bg-acc/[.08] p-3 flex gap-2.5"><span class="text-acc2 mt-0.5">✦</span><p class="text-[12.5px] leading-relaxed text-acc2">${esc(m.tip)}</p></div>` : ''}`;
+      ${m.tip ? `<div class="mt-3 rounded-2xl border border-acc/40 bg-acc/[.08] p-3 flex gap-2.5"><span class="text-acc2 mt-0.5">โฆ</span><p class="text-[12.5px] leading-relaxed text-acc2">${esc(m.tip)}</p></div>` : ''}`;
   }
   function openMeal(id) {
     const m = meals.find((x) => x.id === id); if (!m) return;
     $('#mealDetail').innerHTML = `
-      <div class="num text-[10.5px] text-mute mb-3">${esc(dateStr(m.ts))} · ${timeStr(m.ts)} · ${esc((m.source || 'manual').toUpperCase())}${m.model ? ' · ' + esc(m.model) : ''}</div>
+      <div class="num text-[10.5px] text-mute mb-3">${esc(dateStr(m.ts))} ยท ${timeStr(m.ts)} ยท ${esc((m.source || 'manual').toUpperCase())}${m.model ? ' ยท ' + esc(m.model) : ''}</div>
       ${nutritionBlock(m)}
       ${portionChips(m)}
       <div class="mt-4 grid grid-cols-2 gap-2">
-        <button data-relog="${esc(m.id)}" class="btn-p rounded-2xl py-3 text-[13px]">บันทึกซ้ำวันนี้</button>
-        <button data-del="${esc(m.id)}" class="rounded-2xl border border-bad/50 py-3 text-[13px] text-bad hover:bg-bad/10">ลบรายการนี้</button>
+        <button data-relog="${esc(m.id)}" class="btn-p rounded-2xl py-3 text-[13px]">เธเธฑเธเธ—เธถเธเธเนเธณเธงเธฑเธเธเธตเน</button>
+        <button data-del="${esc(m.id)}" class="rounded-2xl border border-bad/50 py-3 text-[13px] text-bad hover:bg-bad/10">เธฅเธเธฃเธฒเธขเธเธฒเธฃเธเธตเน</button>
       </div>`;
     openModal('mMeal');
   }
@@ -1851,12 +1851,12 @@
     return `${nutritionBlock(m)}${portionChips(m)}
       <div class="mt-3 flex items-center justify-between rounded-xl border border-line px-3 py-2 num text-[11px]">
         <span class="text-mute">REMAINING AFTER</span>
-        <span class="font-bold" style="color:${rem < 0 ? C('bad') : C('good')}">${rem < 0 ? '−' : ''}${fmt(Math.abs(rem))} kcal</span>
+        <span class="font-bold" style="color:${rem < 0 ? C('bad') : C('good')}">${rem < 0 ? 'โ’' : ''}${fmt(Math.abs(rem))} kcal</span>
       </div>`;
   }
   function portionChips(m) {
     const cur = m.portion || 1;
-    return `<div class="mt-3"><div class="eyebrow !tracking-normal !text-[10px] mb-1.5">ปรับปริมาณ · Portion</div><div class="seg grid grid-cols-6 gap-1">${PORTIONS.map((x) => `<button data-portion="${x}" data-id="${esc(m.id)}" class="rounded-lg border border-line py-1.5 text-[11.5px] num ${Math.abs(x - cur) < 1e-6 ? 'on' : ''}">${x}×</button>`).join('')}</div></div>`;
+    return `<div class="mt-3"><div class="eyebrow !tracking-normal !text-[10px] mb-1.5">เธเธฃเธฑเธเธเธฃเธดเธกเธฒเธ“ ยท Portion</div><div class="seg grid grid-cols-6 gap-1">${PORTIONS.map((x) => `<button data-portion="${x}" data-id="${esc(m.id)}" class="rounded-lg border border-line py-1.5 text-[11.5px] num ${Math.abs(x - cur) < 1e-6 ? 'on' : ''}">${x}ร—</button>`).join('')}</div></div>`;
   }
   function setPortion(id, x) {
     const m = meals.find((q) => q.id === id); if (!m) return null;
@@ -1877,12 +1877,12 @@
     const m = meals.find((q) => q.id === id); if (!m) return;
     meals.push({ ...m, id: uid(), ts: Date.now(), base: m.base ? { ...m.base } : undefined, source: m.source === 'sample' ? 'manual' : m.source });
     save(KEYS.meals, meals); range = '1D'; save(KEYS.range, range); renderAll();
-    replay($('#remainingNum'), 'bump'); buzz(10); toast(`+ ${m.name} · ${fmt(m.kcal)} kcal`, 'acc');
+    replay($('#remainingNum'), 'bump'); buzz(10); toast(`+ ${m.name} ยท ${fmt(m.kcal)} kcal`, 'acc');
   }
-  function removeMeal(id) { meals = meals.filter((m) => m.id !== id); save(KEYS.meals, meals); renderAll(); toast('ลบรายการแล้ว', 'bad'); }
+  function removeMeal(id) { meals = meals.filter((m) => m.id !== id); save(KEYS.meals, meals); renderAll(); toast('เธฅเธเธฃเธฒเธขเธเธฒเธฃเนเธฅเนเธง', 'bad'); }
 
   // =========================================================================
-  // SCAN — GEMINI VISION
+  // SCAN โ€” GEMINI VISION
   // =========================================================================
   const SYSTEM_INSTRUCTION = `You are NUTRI-VISION, an evidence-based sports nutrition analysis engine specialised in Thai and Asian food.
 OUTPUT RULES (STRICT):
@@ -1890,15 +1890,15 @@ OUTPUT RULES (STRICT):
 - The JSON must match exactly this schema and key names:
 {"dish_name":string,"estimated_weight_g":number,"hidden_oil_tbsp":number,"nutritional_breakdown":{"calories":number,"macros":{"protein_g":number,"fat_g":number,"carbs_g":number},"micros":{"fiber_g":number,"sodium_mg":number}},"scientific_evaluation":{"mps_threshold_reached":boolean,"satiety_index":"Low"|"Moderate"|"High","actionable_tip":string}}
 ANALYSIS RULES:
-1. Identify every component on the plate and estimate the total edible portion weight in grams using visual cues (plate ~ 23–26 cm, spoon, rice mound volume).
-2. Estimate hidden cooking oil in tablespoons (1 tbsp ≈ 13.5 g fat ≈ 120 kcal). Thai stir-fries / street food typically use 1–2 tbsp per plate; deep-fried items absorb more.
-3. Macros must be internally consistent: calories ≈ protein_g*4 + carbs_g*4 + fat_g*9 (±5%). Fat must include hidden oil.
+1. Identify every component on the plate and estimate the total edible portion weight in grams using visual cues (plate ~ 23โ€“26 cm, spoon, rice mound volume).
+2. Estimate hidden cooking oil in tablespoons (1 tbsp โ 13.5 g fat โ 120 kcal). Thai stir-fries / street food typically use 1โ€“2 tbsp per plate; deep-fried items absorb more.
+3. Macros must be internally consistent: calories โ protein_g*4 + carbs_g*4 + fat_g*9 (ยฑ5%). Fat must include hidden oil.
 4. Sodium: include sauces (fish sauce, soy sauce, oyster sauce, seasoning powder).
-5. mps_threshold_reached = true only if protein_g >= 25 (≈ 2.5 g leucine, sufficient to maximally stimulate muscle protein synthesis).
+5. mps_threshold_reached = true only if protein_g >= 25 (โ 2.5 g leucine, sufficient to maximally stimulate muscle protein synthesis).
 6. satiety_index: "High" if high protein + fiber and low energy density, "Low" if mostly refined carbs/fat, else "Moderate".
 7. dish_name and actionable_tip MUST be in Thai. actionable_tip = exactly ONE short, practical sentence tailored to the user's remaining budget when provided.
 8. Round numbers sensibly (integers for grams/kcal/mg, one decimal for oil). Never return null.
-9. If no food is visible, return dish_name "ไม่พบอาหารในภาพ" with all numeric values 0, mps_threshold_reached false, satiety_index "Low".`;
+9. If no food is visible, return dish_name "เนเธกเนเธเธเธญเธฒเธซเธฒเธฃเนเธเธ เธฒเธ" with all numeric values 0, mps_threshold_reached false, satiety_index "Low".`;
 
   const RESPONSE_SCHEMA = {
     type: 'OBJECT',
@@ -1923,30 +1923,30 @@ ANALYSIS RULES:
   };
 
   const DEMO_DISHES = [
-    { dish_name: 'ข้าวกะเพราไก่สับ ไข่ดาว', estimated_weight_g: 380, hidden_oil_tbsp: 1.5,
+    { dish_name: 'เธเนเธฒเธงเธเธฐเน€เธเธฃเธฒเนเธเนเธชเธฑเธ เนเธเนเธ”เธฒเธง', estimated_weight_g: 380, hidden_oil_tbsp: 1.5,
       nutritional_breakdown: { calories: 640, macros: { protein_g: 32, fat_g: 26, carbs_g: 68 }, micros: { fiber_g: 3, sodium_mg: 1180 } },
-      scientific_evaluation: { mps_threshold_reached: true, satiety_index: 'Moderate', actionable_tip: 'ครั้งหน้าสั่งไข่ดาวแบบไม่กรอบหรือเปลี่ยนเป็นไข่ต้ม ลดไขมันแฝงได้ ~80 kcal' } },
-    { dish_name: 'ข้าวมันไก่ต้ม (ไม่หนัง)', estimated_weight_g: 350, hidden_oil_tbsp: 1.0,
+      scientific_evaluation: { mps_threshold_reached: true, satiety_index: 'Moderate', actionable_tip: 'เธเธฃเธฑเนเธเธซเธเนเธฒเธชเธฑเนเธเนเธเนเธ”เธฒเธงเนเธเธเนเธกเนเธเธฃเธญเธเธซเธฃเธทเธญเน€เธเธฅเธตเนเธขเธเน€เธเนเธเนเธเนเธ•เนเธก เธฅเธ”เนเธเธกเธฑเธเนเธเธเนเธ”เน ~80 kcal' } },
+    { dish_name: 'เธเนเธฒเธงเธกเธฑเธเนเธเนเธ•เนเธก (เนเธกเนเธซเธเธฑเธ)', estimated_weight_g: 350, hidden_oil_tbsp: 1.0,
       nutritional_breakdown: { calories: 520, macros: { protein_g: 28, fat_g: 16, carbs_g: 66 }, micros: { fiber_g: 1, sodium_mg: 950 } },
-      scientific_evaluation: { mps_threshold_reached: true, satiety_index: 'Moderate', actionable_tip: 'ขอข้าวสวยแทนข้าวมัน จะประหยัดได้อีก ~120 kcal โดยโปรตีนเท่าเดิม' } },
-    { dish_name: 'สลัดอกไก่ย่าง น้ำสลัดงาญี่ปุ่น', estimated_weight_g: 320, hidden_oil_tbsp: 0.5,
+      scientific_evaluation: { mps_threshold_reached: true, satiety_index: 'Moderate', actionable_tip: 'เธเธญเธเนเธฒเธงเธชเธงเธขเนเธ—เธเธเนเธฒเธงเธกเธฑเธ เธเธฐเธเธฃเธฐเธซเธขเธฑเธ”เนเธ”เนเธญเธตเธ ~120 kcal เนเธ”เธขเนเธเธฃเธ•เธตเธเน€เธ—เนเธฒเน€เธ”เธดเธก' } },
+    { dish_name: 'เธชเธฅเธฑเธ”เธญเธเนเธเนเธขเนเธฒเธ เธเนเธณเธชเธฅเธฑเธ”เธเธฒเธเธตเนเธเธธเนเธ', estimated_weight_g: 320, hidden_oil_tbsp: 0.5,
       nutritional_breakdown: { calories: 360, macros: { protein_g: 38, fat_g: 14, carbs_g: 20 }, micros: { fiber_g: 6, sodium_mg: 620 } },
-      scientific_evaluation: { mps_threshold_reached: true, satiety_index: 'High', actionable_tip: 'มื้อนี้ยอดเยี่ยม เติมข้าวกล้องครึ่งทัพพีหากมีซ้อมหนักภายใน 3 ชั่วโมง' } },
-    { dish_name: 'ส้มตำไทย + ไก่ย่าง + ข้าวเหนียว', estimated_weight_g: 420, hidden_oil_tbsp: 0.3,
+      scientific_evaluation: { mps_threshold_reached: true, satiety_index: 'High', actionable_tip: 'เธกเธทเนเธญเธเธตเนเธขเธญเธ”เน€เธขเธตเนเธขเธก เน€เธ•เธดเธกเธเนเธฒเธงเธเธฅเนเธญเธเธเธฃเธถเนเธเธ—เธฑเธเธเธตเธซเธฒเธเธกเธตเธเนเธญเธกเธซเธเธฑเธเธ เธฒเธขเนเธ 3 เธเธฑเนเธงเนเธกเธ' } },
+    { dish_name: 'เธชเนเธกเธ•เธณเนเธ—เธข + เนเธเนเธขเนเธฒเธ + เธเนเธฒเธงเน€เธซเธเธตเธขเธง', estimated_weight_g: 420, hidden_oil_tbsp: 0.3,
       nutritional_breakdown: { calories: 580, macros: { protein_g: 34, fat_g: 14, carbs_g: 80 }, micros: { fiber_g: 7, sodium_mg: 1650 } },
-      scientific_evaluation: { mps_threshold_reached: true, satiety_index: 'High', actionable_tip: 'โซเดียมสูงจากน้ำปลาและปลาร้า ดื่มน้ำเปล่าเพิ่มอีก 500 ml ในวันนี้' } },
-    { dish_name: 'ผัดไทยกุ้งสด', estimated_weight_g: 330, hidden_oil_tbsp: 2.0,
+      scientific_evaluation: { mps_threshold_reached: true, satiety_index: 'High', actionable_tip: 'เนเธเน€เธ”เธตเธขเธกเธชเธนเธเธเธฒเธเธเนเธณเธเธฅเธฒเนเธฅเธฐเธเธฅเธฒเธฃเนเธฒ เธ”เธทเนเธกเธเนเธณเน€เธเธฅเนเธฒเน€เธเธดเนเธกเธญเธตเธ 500 ml เนเธเธงเธฑเธเธเธตเน' } },
+    { dish_name: 'เธเธฑเธ”เนเธ—เธขเธเธธเนเธเธชเธ”', estimated_weight_g: 330, hidden_oil_tbsp: 2.0,
       nutritional_breakdown: { calories: 610, macros: { protein_g: 22, fat_g: 24, carbs_g: 76 }, micros: { fiber_g: 3, sodium_mg: 1320 } },
-      scientific_evaluation: { mps_threshold_reached: false, satiety_index: 'Low', actionable_tip: 'โปรตีนยังไม่ถึง 25g ลองเพิ่มไข่หรือกุ้งอีกส่วนเพื่อให้ถึงเกณฑ์ MPS' } },
-    { dish_name: 'โยเกิร์ตกรีก กราโนล่า เบอร์รี่', estimated_weight_g: 250, hidden_oil_tbsp: 0,
+      scientific_evaluation: { mps_threshold_reached: false, satiety_index: 'Low', actionable_tip: 'เนเธเธฃเธ•เธตเธเธขเธฑเธเนเธกเนเธ–เธถเธ 25g เธฅเธญเธเน€เธเธดเนเธกเนเธเนเธซเธฃเธทเธญเธเธธเนเธเธญเธตเธเธชเนเธงเธเน€เธเธทเนเธญเนเธซเนเธ–เธถเธเน€เธเธ“เธ‘เน MPS' } },
+    { dish_name: 'เนเธขเน€เธเธดเธฃเนเธ•เธเธฃเธตเธ เธเธฃเธฒเนเธเธฅเนเธฒ เน€เธเธญเธฃเนเธฃเธตเน', estimated_weight_g: 250, hidden_oil_tbsp: 0,
       nutritional_breakdown: { calories: 330, macros: { protein_g: 24, fat_g: 8, carbs_g: 40 }, micros: { fiber_g: 5, sodium_mg: 110 } },
-      scientific_evaluation: { mps_threshold_reached: false, satiety_index: 'High', actionable_tip: 'เติมเวย์ครึ่งสกู๊ปเพื่อดันโปรตีนเกิน 25g และช่วย Recovery หลังซ้อม' } },
+      scientific_evaluation: { mps_threshold_reached: false, satiety_index: 'High', actionable_tip: 'เน€เธ•เธดเธกเน€เธงเธขเนเธเธฃเธถเนเธเธชเธเธนเนเธเน€เธเธทเนเธญเธ”เธฑเธเนเธเธฃเธ•เธตเธเน€เธเธดเธ 25g เนเธฅเธฐเธเนเธงเธข Recovery เธซเธฅเธฑเธเธเนเธญเธก' } },
   ];
 
   let imgData = null, lastAddedId = null;
   function syncKeyState() {
     const k = getKey(), el = $('#keyState');
-    el.textContent = k ? '● คีย์ส่วนตัว' : '● คีย์ของระบบ';
+    el.textContent = k ? 'โ— เธเธตเธขเนเธชเนเธงเธเธ•เธฑเธง' : 'โ— เธเธตเธขเนเธเธญเธเธฃเธฐเธเธ';
     el.style.color = C('good'); el.style.borderColor = C('good', 0.4);
     $('#scKey').value = k; $('#modelLbl').textContent = getModel();
     $('#keyBox').open = false;
@@ -1970,19 +1970,19 @@ ANALYSIS RULES:
   function renderRecentChips() {
     const seen = new Set(), list = [];
     [...meals].sort((a, b) => b.ts - a.ts).forEach((m) => { if (!seen.has(m.name) && list.length < 8) { seen.add(m.name); list.push(m); } });
-    $('#recentChips').innerHTML = list.length ? list.map((m) => `<button data-relog-chip="${esc(m.id)}" class="shrink-0 rounded-xl border border-line bg-ink/40 px-3 py-2 text-left hover:border-acc active:scale-95 transition"><div class="text-[12px] font-medium max-w-[150px] truncate">${esc(m.name)}</div><div class="num text-[10.5px] text-mute">${fmt(m.kcal)} kcal · P ${fmt(m.p)}g</div></button>`).join('') : '<p class="text-[11.5px] text-mute">ยังไม่มีประวัติ — บันทึกมื้อแรกด้านล่าง</p>';
+    $('#recentChips').innerHTML = list.length ? list.map((m) => `<button data-relog-chip="${esc(m.id)}" class="shrink-0 rounded-xl border border-line bg-ink/40 px-3 py-2 text-left hover:border-acc active:scale-95 transition"><div class="text-[12px] font-medium max-w-[150px] truncate">${esc(m.name)}</div><div class="num text-[10.5px] text-mute">${fmt(m.kcal)} kcal ยท P ${fmt(m.p)}g</div></button>`).join('') : '<p class="text-[11.5px] text-mute">เธขเธฑเธเนเธกเนเธกเธตเธเธฃเธฐเธงเธฑเธ•เธด โ€” เธเธฑเธเธ—เธถเธเธกเธทเนเธญเนเธฃเธเธ”เนเธฒเธเธฅเนเธฒเธ</p>';
   }
   $('#recentChips').addEventListener('click', (e) => { const b = e.target.closest('[data-relog-chip]'); if (!b) return; relog(b.dataset.relogChip); closeModal('mScan'); });
   function mnCalc() {
     const p = num($('#mnP').value), c = num($('#mnC').value), f = num($('#mnF').value), k = Math.round(p * 4 + c * 4 + f * 9);
-    $('#mnCalc').textContent = p || c || f ? `จากมาโคร ≈ ${fmt(k)} kcal (P×4 + C×4 + F×9)` : '';
+    $('#mnCalc').textContent = p || c || f ? `เธเธฒเธเธกเธฒเนเธเธฃ โ ${fmt(k)} kcal (Pร—4 + Cร—4 + Fร—9)` : '';
     return k;
   }
   ['mnP', 'mnC', 'mnF'].forEach((id) => $('#' + id).addEventListener('input', mnCalc));
   $('#mnSave').addEventListener('click', () => {
     const name = $('#mnName').value.trim(), kcal = num($('#mnKcal').value) || mnCalc(), p = Math.round(num($('#mnP').value));
-    if (!name) return toast('กรุณาใส่ชื่อเมนู', 'bad');
-    if (!(kcal > 0)) return toast('กรุณาใส่แคลอรี่หรือมาโคร', 'bad');
+    if (!name) return toast('เธเธฃเธธเธ“เธฒเนเธชเนเธเธทเนเธญเน€เธกเธเธน', 'bad');
+    if (!(kcal > 0)) return toast('เธเธฃเธธเธ“เธฒเนเธชเนเนเธเธฅเธญเธฃเธตเนเธซเธฃเธทเธญเธกเธฒเนเธเธฃ', 'bad');
     const r = {
       dish_name: name, estimated_weight_g: 0, hidden_oil_tbsp: 0,
       nutritional_breakdown: { calories: Math.round(kcal), macros: { protein_g: p, fat_g: Math.round(num($('#mnF').value)), carbs_g: Math.round(num($('#mnC').value)) }, micros: { fiber_g: Math.round(num($('#mnFb').value)), sodium_mg: Math.round(num($('#mnNa').value)) } },
@@ -1992,7 +1992,7 @@ ANALYSIS RULES:
     $('#mnCalc').textContent = '';
     commitResult(normalize(r), 'manual');
   });
-  $('#scKeySave').addEventListener('click', () => { save(KEYS.apiKey, $('#scKey').value.trim()); syncKeyState(); toast($('#scKey').value.trim() ? 'บันทึก API Key แล้ว' : 'ลบ API Key แล้ว'); });
+  $('#scKeySave').addEventListener('click', () => { save(KEYS.apiKey, $('#scKey').value.trim()); syncKeyState(); toast($('#scKey').value.trim() ? 'เธเธฑเธเธ—เธถเธ API Key เนเธฅเนเธง' : 'เธฅเธ API Key เนเธฅเนเธง'); });
 
   function readImage(file) {
     return new Promise((resolve, reject) => {
@@ -2019,25 +2019,25 @@ ANALYSIS RULES:
   async function onFile(e) {
     const f = e.target.files[0]; e.target.value = '';
     if (!f) return;
-    if (!f.type.startsWith('image/')) return toast('รองรับเฉพาะไฟล์รูปภาพ', 'bad');
+    if (!f.type.startsWith('image/')) return toast('เธฃเธญเธเธฃเธฑเธเน€เธเธเธฒเธฐเนเธเธฅเนเธฃเธนเธเธ เธฒเธ', 'bad');
     try {
       imgData = await readImage(f);
       $('#scImg').src = imgData.preview; $('#scImg').classList.remove('hidden'); $('#scPlaceholder').classList.add('hidden');
       $('#scResult').classList.add('hidden'); $('#scError').classList.add('hidden'); $('#scAnalyze').disabled = false;
-    } catch { toast('ไม่สามารถอ่านรูปภาพได้ (ลองใช้ JPG/PNG)', 'bad'); }
+    } catch { toast('เนเธกเนเธชเธฒเธกเธฒเธฃเธ–เธญเนเธฒเธเธฃเธนเธเธ เธฒเธเนเธ”เน (เธฅเธญเธเนเธเน JPG/PNG)', 'bad'); }
   }
   $('#scCamera').addEventListener('change', onFile);
   $('#scFile').addEventListener('change', onFile);
 
   const showError = (msg) => { const el = $('#scError'); el.textContent = msg; el.classList.remove('hidden'); };
-  function setBusy(b, lbl = 'ANALYZING…') {
+  function setBusy(b, lbl = 'ANALYZINGโ€ฆ') {
     $('#scScanLbl').textContent = lbl;
     $('#scScanning').classList.toggle('hidden', !b); $('#scAnalyze').disabled = b || !imgData; $('#scDemo').disabled = b;
   }
   function parseModelJSON(text) {
     const t = String(text || '').trim().replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/i, '').trim();
     const a = t.indexOf('{'), b = t.lastIndexOf('}');
-    if (a === -1 || b === -1) throw new Error('โมเดลไม่ได้ตอบกลับเป็น JSON');
+    if (a === -1 || b === -1) throw new Error('เนเธกเน€เธ”เธฅเนเธกเนเนเธ”เนเธ•เธญเธเธเธฅเธฑเธเน€เธเนเธ JSON');
     return JSON.parse(t.slice(a, b + 1));
   }
   function normalize(r) {
@@ -2046,7 +2046,7 @@ ANALYSIS RULES:
     let kcal = Math.max(0, Math.round(num(nb.calories)));
     if (!kcal) kcal = p * 4 + c * 4 + f * 9;
     return {
-      dish_name: String(r.dish_name || 'อาหารไม่ทราบชื่อ').slice(0, 80),
+      dish_name: String(r.dish_name || 'เธญเธฒเธซเธฒเธฃเนเธกเนเธ—เธฃเธฒเธเธเธทเนเธญ').slice(0, 80),
       estimated_weight_g: Math.max(0, Math.round(num(r.estimated_weight_g))),
       hidden_oil_tbsp: Math.max(0, Math.round(num(r.hidden_oil_tbsp) * 10) / 10),
       nutritional_breakdown: { calories: kcal, macros: { protein_g: p, fat_g: f, carbs_g: c }, micros: { fiber_g: Math.max(0, Math.round(num(mi.fiber_g))), sodium_mg: Math.max(0, Math.round(num(mi.sodium_mg))) } },
@@ -2057,7 +2057,7 @@ ANALYSIS RULES:
       },
     };
   }
-  // Personal key (typed in Settings) → call Google directly. No key → use this site's /api/gemini proxy,
+  // Personal key (typed in Settings) โ’ call Google directly. No key โ’ use this site's /api/gemini proxy,
   // which holds GEMINI_API_KEY on the server so it never ships in the page source.
   async function requestGemini(model, key, body) {
     const url = key
@@ -2068,14 +2068,14 @@ ANALYSIS RULES:
     const res = await fetch(url, { method: 'POST', headers, body: JSON.stringify(body) });
     const data = await res.json().catch(() => null);
     if (!key && (!data || (!res.ok && !data.error))) {
-      const err = new Error('ยังไม่ได้เชื่อมเซิร์ฟเวอร์ AI — เปิดผ่านเว็บที่ deploy แล้ว หรือใส่ API Key เองที่ ☰ ตั้งค่า'); err.status = 0; throw err;
+      const err = new Error('เธขเธฑเธเนเธกเนเนเธ”เนเน€เธเธทเนเธญเธกเน€เธเธดเธฃเนเธเน€เธงเธญเธฃเน AI โ€” เน€เธเธดเธ”เธเนเธฒเธเน€เธงเนเธเธ—เธตเน deploy เนเธฅเนเธง เธซเธฃเธทเธญเนเธชเน API Key เน€เธญเธเธ—เธตเน โฐ เธ•เธฑเนเธเธเนเธฒ'); err.status = 0; throw err;
     }
     if (!res.ok) { const err = new Error(data?.error?.message || `HTTP ${res.status}`); err.status = res.status; throw err; }
     return data;
   }
   async function callGemini() {
     const key = getKey();
-    if (!imgData) return showError('กรุณาเลือกรูปอาหารก่อน');
+    if (!imgData) return showError('เธเธฃเธธเธ“เธฒเน€เธฅเธทเธญเธเธฃเธนเธเธญเธฒเธซเธฒเธฃเธเนเธญเธ');
     $('#scError').classList.add('hidden'); $('#scResult').classList.add('hidden');
     const c = calc(profile), t = totals(mealsOn(dayKey())), note = $('#scNote').value.trim();
     const ctx = `User context: goal=${profile.goal}, bodyweight=${currentWeight()}kg, remaining_calories_today=${Math.round(c.target + num(burn[dayKey()]) - t.kcal)} kcal, remaining_protein_today=${Math.max(0, Math.round(c.protein - t.p))} g, sodium_so_far=${Math.round(t.sodium)} mg.`;
@@ -2083,7 +2083,7 @@ ANALYSIS RULES:
     try {
       let data = null, used = null, lastErr = null;
       for (const model of chain) {
-        setBusy(true, `ANALYZING · ${model}`);
+        setBusy(true, `ANALYZING ยท ${model}`);
         const gen = { responseMimeType: 'application/json', responseSchema: RESPONSE_SCHEMA };
         if (model.startsWith('gemini-2')) gen.temperature = 0.2; // Gemini 3+ recommends default temperature
         const body = {
@@ -2098,13 +2098,13 @@ ANALYSIS RULES:
           if (!unavailable) throw err;
         }
       }
-      if (!data) throw lastErr || new Error('ไม่มีโมเดลที่ใช้งานได้');
-      if (used !== getModel()) toast(`โมเดล ${getModel()} ใช้ไม่ได้ · สลับไปใช้ ${used}`, 'warm');
-      if (data?.promptFeedback?.blockReason) throw new Error('คำขอถูกบล็อก: ' + data.promptFeedback.blockReason);
+      if (!data) throw lastErr || new Error('เนเธกเนเธกเธตเนเธกเน€เธ”เธฅเธ—เธตเนเนเธเนเธเธฒเธเนเธ”เน');
+      if (used !== getModel()) toast(`เนเธกเน€เธ”เธฅ ${getModel()} เนเธเนเนเธกเนเนเธ”เน ยท เธชเธฅเธฑเธเนเธเนเธเน ${used}`, 'warm');
+      if (data?.promptFeedback?.blockReason) throw new Error('เธเธณเธเธญเธ–เธนเธเธเธฅเนเธญเธ: ' + data.promptFeedback.blockReason);
       const text = (data?.candidates?.[0]?.content?.parts || []).filter((p) => !p.thought).map((p) => p.text || '').join('');
-      if (!text) throw new Error('ไม่ได้รับผลลัพธ์จากโมเดล (' + (data?.candidates?.[0]?.finishReason || 'EMPTY') + ')');
+      if (!text) throw new Error('เนเธกเนเนเธ”เนเธฃเธฑเธเธเธฅเธฅเธฑเธเธเนเธเธฒเธเนเธกเน€เธ”เธฅ (' + (data?.candidates?.[0]?.finishReason || 'EMPTY') + ')');
       const result = normalize(parseModelJSON(text));
-      if (!result.nutritional_breakdown.calories) return showError('ไม่พบอาหารในภาพ ลองถ่ายใหม่ให้เห็นจานชัดขึ้น');
+      if (!result.nutritional_breakdown.calories) return showError('เนเธกเนเธเธเธญเธฒเธซเธฒเธฃเนเธเธ เธฒเธ เธฅเธญเธเธ–เนเธฒเธขเนเธซเธกเนเนเธซเนเน€เธซเนเธเธเธฒเธเธเธฑเธ”เธเธถเนเธ');
       commitResult(result, 'gemini', used);
     } catch (err) {
       showError('Gemini Error: ' + (err.message || err));
@@ -2112,7 +2112,7 @@ ANALYSIS RULES:
   }
   $('#scAnalyze').addEventListener('click', callGemini);
   $('#scDemo').addEventListener('click', () => {
-    $('#scError').classList.add('hidden'); $('#scResult').classList.add('hidden'); setBusy(true, 'DEMO MODE…');
+    $('#scError').classList.add('hidden'); $('#scResult').classList.add('hidden'); setBusy(true, 'DEMO MODEโ€ฆ');
     const pick = DEMO_DISHES[Math.floor(Math.random() * DEMO_DISHES.length)];
     setTimeout(() => { setBusy(false); commitResult(normalize(JSON.parse(JSON.stringify(pick))), 'demo'); }, 1100);
   });
@@ -2142,15 +2142,15 @@ ANALYSIS RULES:
           <pre class="px-3 pb-3 text-[10px] leading-relaxed text-soft overflow-x-auto num">${esc(JSON.stringify(r, null, 2))}</pre>
         </details>
         <div class="mt-3 grid grid-cols-2 gap-2">
-          <button id="scUndo" class="rounded-xl border border-line py-3 text-[12px] text-soft hover:border-bad hover:text-bad">ยกเลิก (Undo)</button>
-          <button data-close class="btn-p rounded-xl py-3 text-[12px]">เสร็จสิ้น</button>
+          <button id="scUndo" class="rounded-xl border border-line py-3 text-[12px] text-soft hover:border-bad hover:text-bad">เธขเธเน€เธฅเธดเธ (Undo)</button>
+          <button data-close class="btn-p rounded-xl py-3 text-[12px]">เน€เธชเธฃเนเธเธชเธดเนเธ</button>
         </div>
       </div>`;
     box.classList.remove('hidden');
     $('#scUndo').addEventListener('click', () => { if (lastAddedId) removeMeal(lastAddedId); lastAddedId = null; box.classList.add('hidden'); });
     setTimeout(() => box.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
     replay($('#remainingNum'), 'bump'); buzz(12);
-    toast(`+ ${r.dish_name} · ${fmt(nb.calories)} kcal`, 'acc');
+    toast(`+ ${r.dish_name} ยท ${fmt(nb.calories)} kcal`, 'acc');
   }
 
   // =========================================================================
@@ -2164,12 +2164,12 @@ ANALYSIS RULES:
   function charLine() {
     const c = calc(profile), t = totals(mealsOn(dayKey())), hr = new Date().getHours();
     const rem = Math.round(c.target + num(burn[dayKey()]) - t.kcal), pLeft = Math.round(c.protein - t.p), toGoal = currentWeight() - goalWeight();
-    const hi = hr < 11 ? 'อรุณสวัสดิ์' : hr < 17 ? 'บ่ายนี้ลุยต่อ' : 'เย็นนี้แล้ว';
+    const hi = hr < 11 ? 'เธญเธฃเธธเธ“เธชเธงเธฑเธชเธ”เธดเน' : hr < 17 ? 'เธเนเธฒเธขเธเธตเนเธฅเธธเธขเธ•เนเธญ' : 'เน€เธขเนเธเธเธตเนเนเธฅเนเธง';
     const lines = [
-      rem >= 0 ? `${hi}! วันนี้เหลืออีก ${fmt(rem)} kcal 🔥` : `วันนี้เกินมา ${fmt(-rem)} kcal ไม่เป็นไร พรุ่งนี้ลุยใหม่ 💪`,
-      pLeft > 0 ? `โปรตีนยังขาด ${fmt(pLeft)}g นะ อกไก่สักชิ้นไหม? 🍗` : 'โปรตีนครบแล้ว กล้ามเนื้อขอบคุณ! 💪',
-      Math.abs(toGoal) >= 0.1 ? `อีก ${fmt(Math.abs(toGoal), 1)} kg ถึงยอดเขา 🏔️` : 'เราถึงยอดเขาแล้ว! 🚩',
-      'อย่าลืมดื่มน้ำ 2–3 ลิตรนะ 💧',
+      rem >= 0 ? `${hi}! เธงเธฑเธเธเธตเนเน€เธซเธฅเธทเธญเธญเธตเธ ${fmt(rem)} kcal ๐”ฅ` : `เธงเธฑเธเธเธตเนเน€เธเธดเธเธกเธฒ ${fmt(-rem)} kcal เนเธกเนเน€เธเนเธเนเธฃ เธเธฃเธธเนเธเธเธตเนเธฅเธธเธขเนเธซเธกเน ๐’ช`,
+      pLeft > 0 ? `เนเธเธฃเธ•เธตเธเธขเธฑเธเธเธฒเธ” ${fmt(pLeft)}g เธเธฐ เธญเธเนเธเนเธชเธฑเธเธเธดเนเธเนเธซเธก? ๐—` : 'เนเธเธฃเธ•เธตเธเธเธฃเธเนเธฅเนเธง เธเธฅเนเธฒเธกเน€เธเธทเนเธญเธเธญเธเธเธธเธ“! ๐’ช',
+      Math.abs(toGoal) >= 0.1 ? `เธญเธตเธ ${fmt(Math.abs(toGoal), 1)} kg เธ–เธถเธเธขเธญเธ”เน€เธเธฒ ๐”๏ธ` : 'เน€เธฃเธฒเธ–เธถเธเธขเธญเธ”เน€เธเธฒเนเธฅเนเธง! ๐ฉ',
+      'เธญเธขเนเธฒเธฅเธทเธกเธ”เธทเนเธกเธเนเธณ 2โ€“3 เธฅเธดเธ•เธฃเธเธฐ ๐’ง',
     ];
     lineIdx = (lineIdx + 1) % lines.length;
     return lines[lineIdx];
@@ -2179,11 +2179,11 @@ ANALYSIS RULES:
     buzz([18, 40, 18]);
     const b = bodyParams(profile, currentWeight()), el = $('#lvlUp');
     el.innerHTML = `<div class="lvl-card card w-full max-w-[320px] p-6 text-center">
-      <div class="eyebrow">🏆 Level Up</div>
+      <div class="eyebrow">๐ Level Up</div>
       <div class="mx-auto mt-2 h-[170px] aspect-[200/260]"><svg viewBox="0 0 200 260" class="h-full w-full overflow-visible">${charSVG(b, { uid: 'lv', tier, anim: true })}</svg></div>
       <div class="disp text-[26px] mt-2">${TIERS[tier].en}</div>
       <div class="th text-[12.5px] text-soft mt-1">${TIERS[tier].th}</div>
-      <button class="btn-p mt-5 w-full rounded-2xl py-3 th" data-lvl-close>ไปต่อ 🚀</button></div>`;
+      <button class="btn-p mt-5 w-full rounded-2xl py-3 th" data-lvl-close>เนเธเธ•เนเธญ ๐€</button></div>`;
     el.classList.remove('hide');
     if (reduceMotion) return;
     const colors = ['#8b5cf6', '#a78bfa', '#38bdf8', '#10b981', '#f5b544', '#f472b6', '#ffffff'];
@@ -2193,7 +2193,7 @@ ANALYSIS RULES:
   $('#lvlUp').addEventListener('click', (e) => { if (e.target.id === 'lvlUp' || e.target.closest('[data-lvl-close]')) $('#lvlUp').classList.add('hide'); });
 
   // =========================================================================
-  // EVENTS — nav, ranges, quotes
+  // EVENTS โ€” nav, ranges, quotes
   // =========================================================================
   $('#calRange').addEventListener('click', (e) => { const b = e.target.closest('[data-range]'); if (!b) return; range = b.dataset.range; save(KEYS.range, range); renderCalChart(); });
   $('#wRange').addEventListener('click', (e) => { const b = e.target.closest('[data-wr]'); if (!b) return; wRange = b.dataset.wr; save(KEYS.wRange, wRange); renderWeight(); });
@@ -2244,7 +2244,7 @@ ANALYSIS RULES:
   syncKeyState();
   requestAnimationFrame(() => setNav('secHome'));
   if (!firstRun) setTimeout(() => { replay($('#charBox'), 'ch-jump'); say(charLine()); }, 1300);
-  if (firstRun) setTimeout(() => { openProfile(); toast('ตั้งค่าโปรไฟล์เพื่อสร้างตัวละครและเป้าหมายของคุณ', 'acc'); }, 450);
+  if (firstRun) setTimeout(() => { openProfile(); toast('เธ•เธฑเนเธเธเนเธฒเนเธเธฃเนเธเธฅเนเน€เธเธทเนเธญเธชเธฃเนเธฒเธเธ•เธฑเธงเธฅเธฐเธเธฃเนเธฅเธฐเน€เธเนเธฒเธซเธกเธฒเธขเธเธญเธเธเธธเธ“', 'acc'); }, 450);
 })();
 
 if ('serviceWorker' in navigator) {
@@ -2255,3 +2255,4 @@ if ('serviceWorker' in navigator) {
 </script>
 </body>
 </html>
+
